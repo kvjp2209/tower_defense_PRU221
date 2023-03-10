@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class CoinController : UIController
+public class CoinController : UI
 {
     TextMeshPro txtCoin;
 
