@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
+using TMPro;
 
 public class PanelController : MonoBehaviour
 {
@@ -32,7 +33,21 @@ public class PanelController : MonoBehaviour
     GameObject SlimeTowerPrefab;
     [SerializeField]
     GameObject BombTowerPrefab;
+
+
+    //coin
+    [SerializeField]
+    TextMeshPro BowCoin;
+    [SerializeField]
+    TextMeshPro FireCoin;
+    [SerializeField]
+    TextMeshPro Coin;
+    [SerializeField]
+
+    //L?y object base ?? l?y v? trí ??t tower và destroy base
     public GameObject Base { get; set; }
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -43,6 +58,8 @@ public class PanelController : MonoBehaviour
         SlimeTowerButton.onClick.AddListener(SlimeTowerClick);
         BombTowerButton.onClick.AddListener(BombTowerClick);
         ExitButton.onClick.AddListener(ExitClick);
+
+
     }
 
 
