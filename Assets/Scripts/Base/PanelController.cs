@@ -21,7 +21,6 @@ public class PanelController : MonoBehaviour
     [SerializeField]
     Button ExitButton;
 
-
     //Prefabs
     [SerializeField]
     GameObject BowTowerPrefab;

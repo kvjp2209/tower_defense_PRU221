@@ -32,5 +32,4 @@ public class BaseController : MonoBehaviour
        // Destroy(gameObject);
         panelObject.GetComponent<PanelController>().Base = this.gameObject;
     }
-
 }
