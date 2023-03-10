@@ -4,41 +4,30 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MainMenuController : MonoBehaviour
+public class UIController : MonoBehaviour
 {
     public GameObject settingPanel;
-    public GameObject buttons;
-    public GameObject mainGameLogo;
     public Slider musicSlider, sfxSlider;
     private void Start()
     {
         musicSlider.value = AudioManager.AudioInstance.musicSource.volume;
         sfxSlider.value = AudioManager.AudioInstance.sfxSource.volume;
-        AudioManager.AudioInstance.PlayMusic("MainMenuTheme");
-    }
-    public void StartGameButton()
-    {
-        AudioManager.AudioInstance.PlaySFX("ButtonClick");
-        SceneManager.LoadScene("Map");
+        AudioManager.AudioInstance.PlayMusic("BattleTheme");
     }
     public void QuitGameButton()
     {
         AudioManager.AudioInstance.PlaySFX("ButtonClick");
-        Application.Quit();
+        SceneManager.LoadScene("MenuScene");
     }
     public void SettingButton()
     {
         AudioManager.AudioInstance.PlaySFX("ButtonClick");
         settingPanel.SetActive(!settingPanel.activeSelf);
-        buttons.SetActive(!buttons.activeSelf);
-        mainGameLogo.SetActive(!mainGameLogo.activeSelf);
     }
     public void BackButton()
     {
         AudioManager.AudioInstance.PlaySFX("ButtonClick");
         settingPanel.SetActive(!settingPanel.activeSelf);
-        buttons.SetActive(!buttons.activeSelf);
-        mainGameLogo.SetActive(!mainGameLogo.activeSelf);
     }
     public void ToggleMusicButton(Button button)
     {
