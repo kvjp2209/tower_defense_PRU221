@@ -41,9 +41,7 @@ public class PanelController : MonoBehaviour
     [SerializeField]
     TextMeshPro FireCoin;
     [SerializeField]
-    TextMeshPro Coin;
-    [SerializeField]
-
+    GameObject coinText;
 
     public GameObject Base { get; set; }
 
@@ -75,6 +73,7 @@ public class PanelController : MonoBehaviour
         Tower = Instantiate(BowTowerPrefab, Base.transform.position, Quaternion.identity);
         Base.SetActive(false);
         Base = Tower;
+        int coin = int.Parse(BowCoin.text);
     }
 
     private void SlimeTowerClick()

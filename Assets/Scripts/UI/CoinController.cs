@@ -6,6 +6,8 @@ using TMPro;
 public class CoinController : UIController
 {
     TextMeshPro txtCoin;
+
+
     // Start is called before the first frame update
     void Start()
     {

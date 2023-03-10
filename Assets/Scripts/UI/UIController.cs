@@ -8,6 +8,8 @@ public class UIController : MonoBehaviour
     public int startAmount;
     public int currentAmount;
 
+    public int Amount { get; set; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -19,6 +21,7 @@ public class UIController : MonoBehaviour
     {
         
     }
+
     public void Increase(int amount)
     {
         currentAmount += amount;
