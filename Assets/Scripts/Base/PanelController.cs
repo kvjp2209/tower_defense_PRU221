@@ -44,7 +44,7 @@ public class PanelController : MonoBehaviour
     TextMeshPro Coin;
     [SerializeField]
 
-    //L?y object base ?? l?y v? trí ??t tower và destroy base
+
     public GameObject Base { get; set; }
 
 
@@ -110,6 +110,7 @@ public class PanelController : MonoBehaviour
     }
     private void ExitClick()
     {
+        Base = null;
         this.gameObject.SetActive(false);
     }
 }

@@ -29,7 +29,6 @@ public class BaseController : MonoBehaviour
     {
         panelObject = PanelObjectPool.shareInstance.GetPooledObject();
         panelObject.SetActive(true);
-        Debug.Log(gameObject.transform.localPosition);
        // Destroy(gameObject);
         panelObject.GetComponent<PanelController>().Base = this.gameObject;
         
