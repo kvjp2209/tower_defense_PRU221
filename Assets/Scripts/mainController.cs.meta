@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: f48778e3f840dd7459dd800027c4c34f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - moverPrefab: {instanceID: 0}
+  - gunPrefab: {fileID: 6016551967316478900, guid: a57d5a6dc339e444d951b08f29edf72f, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
