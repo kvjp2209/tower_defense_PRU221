@@ -13,7 +13,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Canvas
   - 
   - 
   - 
@@ -40,4 +40,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Map
+    uniqueID: 2544364531
+    locked: 0
+  - name: Base
+    uniqueID: 3265044153
+    locked: 0
+  - name: Tower
+    uniqueID: 2929096253
+    locked: 0
+  - name: Panel
+    uniqueID: 3544943475
+    locked: 0
+  - name: UI
+    uniqueID: 1549305665
     locked: 0

@@ -19,7 +19,7 @@ public class MainMenuController : MonoBehaviour
     public void StartGameButton()
     {
         AudioManager.AudioInstance.PlaySFX("ButtonClick");
-        SceneManager.LoadScene("MainScene");
+        SceneManager.LoadScene("Map");
     }
     public void QuitGameButton()
     {
