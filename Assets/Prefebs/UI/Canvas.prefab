@@ -259,7 +259,7 @@ MonoBehaviour:
   BombTowerPrefab: {fileID: 0}
   BowCoin: {fileID: 0}
   FireCoin: {fileID: 0}
-  Coin: {fileID: 0}
+  coinText: {fileID: 0}
 --- !u!1 &531286051057248095
 GameObject:
   m_ObjectHideFlags: 0
