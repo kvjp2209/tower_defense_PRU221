@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 531286050804057269}
   - component: {fileID: 6513265178262770697}
   m_Layer: 8
-  m_Name: Canvas
+  m_Name: TowerSelectPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
