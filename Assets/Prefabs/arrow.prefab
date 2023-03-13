@@ -10,12 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 7741228096990119609}
   - component: {fileID: 418591952338893804}
-  - component: {fileID: 5229190967354254663}
   - component: {fileID: 2111437967938862322}
   - component: {fileID: 181268012164672896}
   m_Layer: 0
   m_Name: arrow
-  m_TagString: ArrowBullet
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,18 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5229190967354254663
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 841637235457426801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5393e782f0932c478754245045d197f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!50 &2111437967938862322
 Rigidbody2D:
   serializedVersion: 4
