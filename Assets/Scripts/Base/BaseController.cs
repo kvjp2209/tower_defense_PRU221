@@ -27,7 +27,7 @@ public class BaseController : MonoBehaviour
     private void ShowPanelClick()
     {
         AudioManager.AudioInstance.PlaySFX("ButtonClick");
-        panelObject = PanelObjectPool.shareInstance.GetPooledObject();
+        panelObject = PanelObjectPool.shareInstance.getFirst();
         panelObject.SetActive(true);
        // Destroy(gameObject);
         panelObject.GetComponent<PanelController>().Base = this.gameObject;
