@@ -6,10 +6,17 @@ public class Monster : MonoBehaviour
 {
     public float speed;
     private WayPoints WayPoints;
+    private float currentHealth;
+    [SerializeField]
+    private float MaxHealth;
+    public HealthBarBehaviour healthBarBehaviour;
+
 
     private int waypointIndex;
     private void Start()
     {
+        currentHealth = MaxHealth;
+        healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
         int monsterPath = Random.Range(0, 2);
         if (gameObject.tag.Equals("Bat")) {
             if (monsterPath == 0) {
@@ -33,12 +40,22 @@ public class Monster : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            takeDamage(1);
+            healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
+            if (currentHealth <= 0)
+            {
+                gameObject.SetActive(false);
+            }
+        }
+        
         transform.position = Vector2.MoveTowards(transform.position, WayPoints.wayPoints[waypointIndex].position, speed * Time.deltaTime);
 
-        Vector3 dir = WayPoints.wayPoints[waypointIndex].position - transform.position;
+        /*Vector3 dir = WayPoints.wayPoints[waypointIndex].position - transform.position;
         float angle = Mathf.Atan2(dir.x, dir.y) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
-
+*/
         if (Vector2.Distance(transform.position, WayPoints.wayPoints[waypointIndex].position) < 0.1f)
         {
 
@@ -53,6 +70,11 @@ public class Monster : MonoBehaviour
         }
     }
 
+
+    private void takeDamage(int damege)
+    {
+        this.currentHealth -= damege;
+    }
 
     [SerializeField]
     private GameObject startPortal;
