@@ -34,10 +34,12 @@ public class MainMenuController : MonoBehaviour
     }
     public void EnemyInfoMenu()
     {
+        AudioManager.AudioInstance.PlaySFX("ButtonClick");
         infoEnemyPage.SetActive(true);
     }
     public void CloseInfoMenu()
     {
+        AudioManager.AudioInstance.PlaySFX("ButtonClick");
         infoEnemyPage.SetActive(false);
     }
 

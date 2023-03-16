@@ -6675,7 +6675,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1038012456}
         m_TargetAssemblyTypeName: MainMenuController, Assembly-CSharp
-        m_MethodName: BackButton
+        m_MethodName: CloseSettingButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
