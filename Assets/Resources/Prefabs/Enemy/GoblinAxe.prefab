@@ -100,11 +100,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8999730068266034745}
   - component: {fileID: 5813700300307065514}
-  - component: {fileID: 8457903660093182717}
-  - component: {fileID: -4086966067672169630}
+  - component: {fileID: 2103940555523228954}
   m_Layer: 0
   m_Name: GoblinAxe
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,8 +162,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -105774645
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b32da84cb94c44444b5311c0f43abc38, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -177,7 +176,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8457903660093182717
+--- !u!114 &2103940555523228954
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -186,28 +185,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 931029395247512522}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e7272b939b1660468ed9e52cbf17f5f, type: 3}
+  m_Script: {fileID: 11500000, guid: cf47fc3c7133cd6498774af4675492ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  MaxHealth: 10
+  MaxHealth: 100
   healthBarBehaviour: {fileID: 4052929003041407480}
-  startPortal: {fileID: 7492438705769026993, guid: 2757767cfe6e755488a7e108c6969691, type: 3}
---- !u!114 &-4086966067672169630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 931029395247512522}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 436371e067f2d5d4c915bfb1c781add0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  objectToPool: {fileID: 931029395247512522}
-  amountToPool: 10
-  objectPrefabs: []
 --- !u!1 &2961019033842664044
 GameObject:
   m_ObjectHideFlags: 0

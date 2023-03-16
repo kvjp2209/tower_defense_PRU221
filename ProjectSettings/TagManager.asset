@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Map
+  - Bat
+  - WaypointBat1
+  - WaypointBat2
+  - WaypointNomal1
+  - WaypointNomal2
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -42,6 +48,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Point
+    uniqueID: 1322108055
+    locked: 0
   - name: Map
     uniqueID: 2544364531
     locked: 0
@@ -56,4 +65,7 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 1549305665
+    locked: 0
+  - name: Enemy
+    uniqueID: 4189192651
     locked: 0

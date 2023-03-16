@@ -20,6 +20,8 @@ public class SpawnEnemy : MonoBehaviour
     private int random;
     public int Wave { get; set; }
     public int Count { get; set; }
+
+    EnemyFactory enemyFactory;
     #endregion
     #region Timer Spawn Enemy
     Timer spawnEnemy_timer;
@@ -35,6 +37,8 @@ public class SpawnEnemy : MonoBehaviour
         //get list type of all enemies
         listTypeEnemy = new string[5] {"normal", "goblin", "witch", "bat","boar" };
         listEnemySpawn = new string[5];
+
+        enemyFactory = gameObject.AddComponent<EnemyFactory>();
     }
 
     // Update is called once per frame
@@ -43,10 +47,11 @@ public class SpawnEnemy : MonoBehaviour
         updateProperty();
         if (spawnEnemy_timer.Finished)
         {
-            if(Count <= size)
+            if(Count < size)
             {
                 random = Random.Range(0, numberOfTypeEnemy);
                 Debug.Log(listEnemySpawn[random]);
+                enemyFactory.CreateEnemy(listEnemySpawn[random]);
                 Count++;
                 spawnEnemy_timer.Run();
             }
