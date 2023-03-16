@@ -7,11 +7,9 @@ public class BatEnemy : Enemy
     // Start is called before the first frame update
     void Start()
     {
-
         setUp();
         getDirectPath();
     }
-
 
     // Update is called once per frame
     void Update()
