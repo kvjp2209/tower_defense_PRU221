@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Map
+  - WaypointBat1
+  - WaypointBat2
+  - WaypointNomal1
+  - WaypointNomal2
+  - Enemy
+  - Projectile
   layers:
   - Default
   - TransparentFX

@@ -14,8 +14,16 @@ public abstract class Enemy : MonoBehaviour
     public HealthBarBehaviour healthBarBehaviour;
 
     private int waypointIndex;
+
+    public List<Enemy> EnemyList = new List<Enemy>();
+
+    void Start()
+    {
+        RegisterEnemy(this);
+    }
     public void setUp()
     {
+        
         currentHealth = MaxHealth;
         healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
        
@@ -65,4 +73,26 @@ public abstract class Enemy : MonoBehaviour
     {
         this.currentHealth -= damege;
     }
+
+    ///Register - when enemy spawns
+    public void RegisterEnemy(Enemy enemy)
+    {
+        EnemyList.Add(enemy);
+    }
+    ///Unregister - When they escape the screen
+    public void UnregisterEnemy(Enemy enemy)
+    {
+        EnemyList.Remove(enemy);
+        Destroy(enemy.gameObject);
+    }
+    ///Destroy - At the end of the wave
+    public void DestroyAllEnemies()
+    {
+        foreach (Enemy enemy in EnemyList)
+        {
+            Destroy(enemy.gameObject);
+        }
+        EnemyList.Clear();
+    }
+
 }
