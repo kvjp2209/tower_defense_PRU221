@@ -5,19 +5,20 @@ using TMPro;
 
 public class CoinController : UI
 {
-    TextMeshPro txtCoin;
+    //[SerializeField]
+    //TextMeshPro txtCoin;
 
+    //// Start is called before the first frame update
+    //void Start()
+    //{
+    //    txtCoin.text = "Coin: " + startAmount;
+    //    currentAmount = startAmount;
+    //}
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        txtCoin.text = "Coin: " + startAmount;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        txtCoin.text = "Coin: " + currentAmount;
-    }
+    //// Update is called once per frame
+    //void Update()
+    //{
+    //    txtCoin.text = "Coin: " + currentAmount;
+    //}
   
 }

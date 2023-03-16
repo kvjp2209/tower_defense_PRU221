@@ -14,6 +14,7 @@ public class HealthBarController : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
+        healthSlider.value = currentHealth;
         UpdateSlider();
     }
 
@@ -21,11 +22,6 @@ public class HealthBarController : MonoBehaviour
     {
         currentHealth -= damage;
         UpdateSlider();
-
-        if (currentHealth <= 0)
-        {
-            gameOverPanel.SetActive(true);
-        }
     }
 
     private void UpdateSlider()

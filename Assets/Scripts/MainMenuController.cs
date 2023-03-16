@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class MainMenuController : MonoBehaviour
 {
+    public GameObject menuOptions;
+    public GameObject infoEnemyPage;
     public GameObject settingPanel;
     public GameObject buttons;
     public GameObject mainGameLogo;
@@ -17,6 +19,29 @@ public class MainMenuController : MonoBehaviour
         AudioManager.AudioInstance.PlayMusic("MainMenuTheme");
     }
     public void StartGameButton()
+    {
+        AudioManager.AudioInstance.PlaySFX("ButtonClick");
+        menuOptions.SetActive(true);
+        buttons.SetActive(false);
+        mainGameLogo.SetActive(false);   
+    }
+    public void CloseMenuButton()
+    {
+        AudioManager.AudioInstance.PlaySFX("ButtonClick");
+        menuOptions.SetActive(false);
+        buttons.SetActive(true);
+        mainGameLogo.SetActive(true);   
+    }
+    public void EnemyInfoMenu()
+    {
+        infoEnemyPage.SetActive(true);
+    }
+    public void CloseInfoMenu()
+    {
+        infoEnemyPage.SetActive(false);
+    }
+
+    public void StartNewGame()
     {
         AudioManager.AudioInstance.PlaySFX("ButtonClick");
         SceneManager.LoadScene("Map");
@@ -33,7 +58,7 @@ public class MainMenuController : MonoBehaviour
         buttons.SetActive(!buttons.activeSelf);
         mainGameLogo.SetActive(!mainGameLogo.activeSelf);
     }
-    public void BackButton()
+    public void CloseSettingButton()
     {
         AudioManager.AudioInstance.PlaySFX("ButtonClick");
         settingPanel.SetActive(!settingPanel.activeSelf);
