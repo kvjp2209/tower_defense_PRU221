@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,6 +8,7 @@ public abstract class Enemy : MonoBehaviour
     public float speed;
     public WayPoints WayPoints { get; set; }
     public float currentHealth { get; set; }
+    public int damage { get; set; }
     [SerializeField]
     public float MaxHealth;
     public HealthBarBehaviour healthBarBehaviour;
@@ -17,7 +19,6 @@ public abstract class Enemy : MonoBehaviour
     {
         currentHealth = MaxHealth;
         healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
-       
     }
 
     public void getNormalPath()
@@ -63,15 +64,15 @@ public abstract class Enemy : MonoBehaviour
         }
     }
 
-
     public void takeDamage(int damege)
     {
         this.currentHealth -= damege;
     }
 
- 
-
-  
-
+    public void healing(int _value)
+    {
+        this.currentHealth = Mathf.Clamp(currentHealth + _value, 0, MaxHealth);
+        healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
+    }
 
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 23726361}
   - component: {fileID: 23726363}
   - component: {fileID: 23726362}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   m_Component:
   - component: {fileID: 218191569}
   - component: {fileID: 218191570}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,7 +175,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1492276560}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -214,7 +214,7 @@ GameObject:
   - component: {fileID: 1565794463}
   - component: {fileID: 1565794465}
   - component: {fileID: 1565794464}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -292,7 +292,7 @@ GameObject:
   - component: {fileID: 1898825538}
   - component: {fileID: 1898825537}
   - component: {fileID: 1898825536}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,7 +408,8 @@ GameObject:
   - component: {fileID: 1148224973735089328}
   - component: {fileID: 8262875797891989817}
   - component: {fileID: 4076555322069014018}
-  m_Layer: 0
+  - component: {fileID: 5800970865709378703}
+  m_Layer: 9
   m_Name: Bat
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -496,5 +497,31 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  MaxHealth: 100
+  MaxHealth: 10
   healthBarBehaviour: {fileID: 1898825536}
+--- !u!61 &5800970865709378703
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5256111955156176379}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.10072476, y: 0.21264105}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.75, y: 1.82}
+    newSize: {x: 2.75, y: 1.82}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.0488714, y: 1.3947178}
+  m_EdgeRadius: 0

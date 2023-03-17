@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9201796215954614921}
   - component: {fileID: 3631164707623065535}
   - component: {fileID: 8313576610756520801}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86,7 +86,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7138710169561133229}
   - component: {fileID: 6235672399647672336}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 2125191409755910144}
   - component: {fileID: 7226133009179267979}
   - component: {fileID: 5465823523883536002}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Canvas (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2733922547376244654}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -332,7 +332,8 @@ GameObject:
   - component: {fileID: 7797017889242134162}
   - component: {fileID: 8294269862920587001}
   - component: {fileID: -1477423955902286399}
-  m_Layer: 0
+  - component: {fileID: 385231887404430936}
+  m_Layer: 9
   m_Name: BigBoar
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -420,8 +421,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  MaxHealth: 100
+  MaxHealth: 10
   healthBarBehaviour: {fileID: 5465823523883536002}
+--- !u!61 &385231887404430936
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5336867692907664496}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.027979046, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.56, y: 1.5}
+    newSize: {x: 2.56, y: 1.5}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.8773103, y: 1.5}
+  m_EdgeRadius: 0
 --- !u!1 &6863953874522145365
 GameObject:
   m_ObjectHideFlags: 0
@@ -433,7 +460,7 @@ GameObject:
   - component: {fileID: 4475568394730090084}
   - component: {fileID: 6702758020721202871}
   - component: {fileID: 7345399163930518091}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}

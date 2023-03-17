@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BoarEnemy : Enemy
 {
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,4 +29,6 @@ public class BoarEnemy : Enemy
         }
         Move();
     }
+
+
 }
