@@ -351,7 +351,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.25}
   m_AnchorMax: {x: 1, y: 0.75}
-  m_AnchoredPosition: {x: -42.13, y: 0}
+  m_AnchoredPosition: {x: -42.130005, y: 0}
   m_SizeDelta: {x: -94.25, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &187193883
@@ -3697,8 +3697,8 @@ GameObject:
   - component: {fileID: 1449485777}
   - component: {fileID: 1449485776}
   - component: {fileID: 1449485779}
-  - component: {fileID: 1449485780}
   - component: {fileID: 1449485781}
+  - component: {fileID: 1449485782}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3789,21 +3789,6 @@ MonoBehaviour:
   mapMinY: -6
   MapMaxX: 15
   MapMaxY: 6
---- !u!114 &1449485780
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1449485775}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 148fb21468be6734ba13911391bfe11b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pooledObjects: []
-  objectToPool: {fileID: 531286050804057258, guid: 63d12a4ed08c87e4ead1d08682df3731, type: 3}
-  amountToPool: 1
 --- !u!114 &1449485781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3817,6 +3802,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wayPoints: []
+--- !u!114 &1449485782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449485775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51ac9218ea364864d8f7d939e466df39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectToPool: {fileID: 0}
+  amountToPool: 0
 --- !u!1 &1459689521
 GameObject:
   m_ObjectHideFlags: 0
