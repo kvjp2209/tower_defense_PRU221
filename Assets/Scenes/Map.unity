@@ -3699,6 +3699,11 @@ GameObject:
   - component: {fileID: 1449485779}
   - component: {fileID: 1449485780}
   - component: {fileID: 1449485781}
+  - component: {fileID: 1449485786}
+  - component: {fileID: 1449485785}
+  - component: {fileID: 1449485784}
+  - component: {fileID: 1449485783}
+  - component: {fileID: 1449485782}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3817,6 +3822,81 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wayPoints: []
+--- !u!114 &1449485782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449485775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5634a9d79a3f84c40a0b7c8aa3502094, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectToPool: {fileID: 3354938469936611947, guid: e9bb99043a735d54696989725c0af78b, type: 3}
+  amountToPool: 7
+--- !u!114 &1449485783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449485775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49b08946bd6324a41a15c2897bd814b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectToPool: {fileID: 3354938469936611947, guid: 77437e460cafb1944bac6ec47fc364d8, type: 3}
+  amountToPool: 7
+--- !u!114 &1449485784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449485775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb72ca657cbf28341903f296d113171f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectToPool: {fileID: 3354938469936611947, guid: f0ce420d59343f641b6a112abacc80d5, type: 3}
+  amountToPool: 7
+--- !u!114 &1449485785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449485775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd4623455b10ba944ac3836b3acaace7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectToPool: {fileID: 3354938469936611947, guid: 915f603b664367647835b9f5de454bbf, type: 3}
+  amountToPool: 7
+--- !u!114 &1449485786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449485775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b386ef824f8a9045bd527dca7c9826d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectToPool: {fileID: 3354938469936611947, guid: 56801798fc2a1fc46bee12e773d25ee0, type: 3}
+  amountToPool: 7
 --- !u!1 &1459689521
 GameObject:
   m_ObjectHideFlags: 0

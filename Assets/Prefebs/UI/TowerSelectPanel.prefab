@@ -1447,7 +1447,7 @@ RectTransform:
   m_GameObject: {fileID: 6775129444900920319}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.92992914, y: 0.92992914, z: 0.92992914}
+  m_LocalScale: {x: 1, y: 1, z: 0.92992914}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6769957147719529954}
@@ -1461,8 +1461,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -20.978455, y: -7.4921722}
-  m_SizeDelta: {x: -559.35645, y: -156.23395}
+  m_AnchoredPosition: {x: 0, y: -4.999996}
+  m_SizeDelta: {x: -200, y: -150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8880689922984043733
 CanvasRenderer:
@@ -1744,11 +1744,6 @@ MonoBehaviour:
   SlimeTowerButton: {fileID: 4837749747792405895}
   BombTowerButton: {fileID: 6301629041895151162}
   ExitButton: {fileID: 2962923227861631698}
-  BowTowerPrefab: {fileID: 3354938469936611947, guid: 915f603b664367647835b9f5de454bbf, type: 3}
-  FireTowerPrefab: {fileID: 3354938469936611947, guid: f0ce420d59343f641b6a112abacc80d5, type: 3}
-  MageTowerPrefab: {fileID: 3354938469936611947, guid: 77437e460cafb1944bac6ec47fc364d8, type: 3}
-  SlimeTowerPrefab: {fileID: 3354938469936611947, guid: e9bb99043a735d54696989725c0af78b, type: 3}
-  BombTowerPrefab: {fileID: 3354938469936611947, guid: 56801798fc2a1fc46bee12e773d25ee0, type: 3}
   BowCoin: {fileID: 0}
   FireCoin: {fileID: 0}
   coinText: {fileID: 0}
