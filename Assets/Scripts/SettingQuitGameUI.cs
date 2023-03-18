@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class SettingQuitGameUI : MonoBehaviour
 {
     public GameObject settingPanel;
+    public GameObject quitGameConfirmPanel;
     public Slider musicSlider, sfxSlider;
     private void Start()
     {
@@ -16,8 +17,9 @@ public class SettingQuitGameUI : MonoBehaviour
     }
     public void QuitGameButton()
     {
+        Time.timeScale = 0;
         AudioManager.AudioInstance.PlaySFX("ButtonClick");
-        SceneManager.LoadScene("MenuScene");
+        quitGameConfirmPanel.SetActive(true);
     }
     public void SettingButton()
     {
@@ -25,11 +27,23 @@ public class SettingQuitGameUI : MonoBehaviour
         AudioManager.AudioInstance.PlaySFX("ButtonClick");
         settingPanel.SetActive(!settingPanel.activeSelf);
     }
-    public void BackButton()
+    public void SettingBackButton()
     {
         Time.timeScale = 1;
         AudioManager.AudioInstance.PlaySFX("ButtonClick");
         settingPanel.SetActive(!settingPanel.activeSelf);
+    }
+    public void QuitBackButton()
+    {
+        Time.timeScale = 1;
+        AudioManager.AudioInstance.PlaySFX("ButtonClick");
+        quitGameConfirmPanel.SetActive(!quitGameConfirmPanel.activeSelf);
+    }
+    public void QuitConfirmButton()
+    {
+        Time.timeScale = 1;
+        AudioManager.AudioInstance.PlaySFX("ButtonClick");
+        SceneManager.LoadScene("MenuScene");
     }
     public void ToggleMusicButton(Button button)
     {
