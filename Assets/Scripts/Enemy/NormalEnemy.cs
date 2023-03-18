@@ -5,16 +5,12 @@ using UnityEngine;
 
 public class NormalEnemy : Enemy
 {
-   
-    
     // Start is called before the first frame update
     void Start()
     {
-
        setUp();
-        getNormalPath();
+       getNormalPath();
     }
-
 
     // Update is called once per frame
     void Update()

@@ -14,6 +14,7 @@ public abstract class Enemy : MonoBehaviour
     public HealthBarBehaviour healthBarBehaviour;
 
     private int waypointIndex;
+
     public void setUp()
     {
         currentHealth = MaxHealth;
@@ -57,6 +58,7 @@ public abstract class Enemy : MonoBehaviour
             }
             else
             {
+                HealthBarManager.instance.TakeDamage(MaxHealth);
                 Destroy(gameObject);
             }
         }

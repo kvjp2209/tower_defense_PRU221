@@ -7,7 +7,6 @@ public class BoarEnemy : Enemy
     // Start is called before the first frame update
     void Start()
     {
-
         setUp();
         getNormalPath();
     }

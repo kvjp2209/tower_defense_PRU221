@@ -21,11 +21,13 @@ public class SettingQuitGameUI : MonoBehaviour
     }
     public void SettingButton()
     {
+        Time.timeScale = 0;
         AudioManager.AudioInstance.PlaySFX("ButtonClick");
         settingPanel.SetActive(!settingPanel.activeSelf);
     }
     public void BackButton()
     {
+        Time.timeScale = 1;
         AudioManager.AudioInstance.PlaySFX("ButtonClick");
         settingPanel.SetActive(!settingPanel.activeSelf);
     }
