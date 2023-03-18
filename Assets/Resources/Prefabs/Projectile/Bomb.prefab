@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 5844516349274330829}
   - component: {fileID: 312249186635655890}
   m_Layer: 0
-  m_Name: Slime
-  m_TagString: SlimeProjectile
+  m_Name: Bomb
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

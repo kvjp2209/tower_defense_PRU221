@@ -2,7 +2,7 @@ using UnityEngine;
 
 public enum projectileType
 {
-    arrow, slime
+    arrow, slime, fireball, mage, bomb
 };
 public class Projectile : MonoBehaviour
 {

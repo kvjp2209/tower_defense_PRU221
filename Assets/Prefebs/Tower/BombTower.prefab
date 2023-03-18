@@ -236,7 +236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenAttacks: 0.5
   attackRadius: 7
-  projectile: {fileID: 5844516349274330829, guid: a5415e0a5b69cc14db7a8dee79f4bc4a, type: 3}
+  projectile: {fileID: 5844516349274330829, guid: 2ea3ce74df9696d4ca8e683dfd9226af, type: 3}
 --- !u!1 &4965745975280194689
 GameObject:
   m_ObjectHideFlags: 0

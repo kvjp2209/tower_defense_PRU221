@@ -242,8 +242,8 @@ MonoBehaviour:
   SlimeTowerButton: {fileID: 531286051737187900}
   BombTowerButton: {fileID: 531286051057248089}
   ExitButton: {fileID: 531286051795307533}
-  BowTowerPrefab: {fileID: 6571613256662231981, guid: e1a117cdd8fd0884e8953c9ce28b978d, type: 3}
-  FireTowerPrefab: {fileID: 3241775122562611091, guid: 52e22960d7ebcdc4dac0ab4ee248df7b, type: 3}
+  BowTowerPrefab: {fileID: 3354938469936611947, guid: 915f603b664367647835b9f5de454bbf, type: 3}
+  FireTowerPrefab: {fileID: 3354938469936611947, guid: f0ce420d59343f641b6a112abacc80d5, type: 3}
   MageTowerPrefab: {fileID: 3354938469936611947, guid: 77437e460cafb1944bac6ec47fc364d8, type: 3}
   SlimeTowerPrefab: {fileID: 3354938469936611947, guid: e9bb99043a735d54696989725c0af78b, type: 3}
   BombTowerPrefab: {fileID: 3354938469936611947, guid: 56801798fc2a1fc46bee12e773d25ee0, type: 3}

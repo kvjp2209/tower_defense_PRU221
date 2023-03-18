@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 5844516349274330829}
   - component: {fileID: 312249186635655890}
   m_Layer: 0
-  m_Name: Slime
-  m_TagString: SlimeProjectile
+  m_Name: Bow
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 365e74f9cfc67ee428cbd7fed81524a3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5c665a56a3f0bf84aa2512a788fabcb1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDamage: 5
-  pType: 1
+  pType: 0
 --- !u!58 &312249186635655890
 CircleCollider2D:
   m_ObjectHideFlags: 0

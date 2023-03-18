@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6247703236999382617}
   - component: {fileID: 7809641625277284968}
   - component: {fileID: 2126628541539547819}
+  - component: {fileID: -7498273698416161760}
+  - component: {fileID: -8560918718023029625}
   m_Layer: 0
   m_Name: SkeletonMage
   m_TagString: Enemy
@@ -101,6 +103,53 @@ MonoBehaviour:
   speed: 2
   MaxHealth: 100
   healthBarBehaviour: {fileID: 7147931199482379999}
+--- !u!50 &-7498273698416161760
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4493087289183215987}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &-8560918718023029625
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4493087289183215987}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 2.15}
+    newSize: {x: 3, y: 2.15}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.84, y: 1.26}
+  m_EdgeRadius: 0
 --- !u!1 &5339739327084854158
 GameObject:
   m_ObjectHideFlags: 0
