@@ -10,16 +10,16 @@ public class TowerController : MonoBehaviour
     float attackRadius;
     [SerializeField]
     Projectile projectile;
-    GameObject targetEnemy = null;
-    float attackCounter;
-    bool isAttacking = false;
+    private GameObject targetEnemy = null;
+    private float attackCounter;
+    private bool isAttacking = false;
 
     // Start is called before the first frame update
     void Start()
     {
 
     }
-
+    
     // Update is called once per frame
     void Update()
     {
@@ -31,12 +31,10 @@ public class TowerController : MonoBehaviour
             {
                 targetEnemy = nearestEnemy;
             }
-
-
         }
         else
         {
-            if (attackCounter <= 0)
+            if (attackCounter <= 0f)
             {
                 isAttacking = true;
                 attackCounter = timeBetweenAttacks;
@@ -45,18 +43,20 @@ public class TowerController : MonoBehaviour
             {
                 isAttacking = false;
             }
-            if (Vector2.Distance(transform.localPosition, targetEnemy.transform.localPosition) > attackRadius)
+            if (Vector2.Distance(transform.position, targetEnemy.transform.position) > attackRadius)
             {
                 targetEnemy = null;
             }
         }
+        if (isAttacking == true) { Attack(); }
+
 
 
     }
 
-    void FixedUpdate()
+    public void FixedUpdate()
     {
-        if (isAttacking) { Attack(); }
+        
 
     }
 
@@ -71,7 +71,6 @@ public class TowerController : MonoBehaviour
         }
         else
         {
-            Debug.Log("Nyyyyyyyyyyyyyyyyyyyyyyyyyyyy" + targetEnemy + "Nooooooooooooooooooo");
             StartCoroutine(MoveProjectile(newProjectile));
         }
     }
@@ -107,23 +106,13 @@ public class TowerController : MonoBehaviour
 
     private GameObject GetNearestEnemy()
     {
-        /*List<Enemy> enemiesInRange = new List<Enemy>();
-        foreach (Enemy enemy in enemy.EnemyList)
-        {
-            if (Vector2.Distance(transform.localPosition, enemy.transform.localPosition) <= attackRadius)
-            {
-                enemiesInRange.Add(enemy);
-            }
-        }
-        return enemiesInRange;*/
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         GameObject closestEnemy = enemies[0];
         if (enemies.Length > 0)
         {
-            
             foreach (GameObject enemy in enemies)
             {
-                if (Vector3.Distance(enemy.transform.position, transform.position) < Vector3.Distance(closestEnemy.transform.position, transform.position))
+                if (Vector2.Distance(enemy.transform.localPosition, transform.position) < Vector2.Distance(closestEnemy.transform.localPosition, transform.position))
                 {
                     closestEnemy = enemy;
                 }
@@ -134,19 +123,3 @@ public class TowerController : MonoBehaviour
         return closestEnemy;
     }
 }
-
-  /*  private Enemy GetNearestEnemy()
-    {
-        Enemy nearestEnemy = null;
-        float smallestDistance = float.PositiveInfinity;
-        foreach (Enemy enemy in GetEnemiesInRange())
-        {
-            if (Vector2.Distance(transform.localPosition, enemy.transform.localPosition) < smallestDistance)
-            {
-                smallestDistance = Vector2.Distance(transform.localPosition, enemy.transform.localPosition);
-                nearestEnemy = enemy;
-            }
-        }
-        return nearestEnemy;
-    }
-}*/

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public abstract class Enemy : MonoBehaviour
 {
@@ -15,22 +16,16 @@ public abstract class Enemy : MonoBehaviour
 
     private int waypointIndex;
 
-    public List<Enemy> EnemyList = new List<Enemy>();
-
-    void Start()
-    {
-        RegisterEnemy(this);
-    }
     public void setUp()
     {
         
         currentHealth = MaxHealth;
         healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
-       
+
     }
     public void getNormalPath()
     {
-        int monsterPath = Random.Range(0, 2);
+        int monsterPath = Random.Range(0, 2);  
             if (monsterPath == 0)
             {
                 WayPoints = GameObject.FindGameObjectWithTag("WaypointNomal1").GetComponent<WayPoints>();
@@ -69,30 +64,45 @@ public abstract class Enemy : MonoBehaviour
             }
         }
     }
+
+    void OnTriggerEnter2D(Collider2D collider2D)
+    {
+         if (collider2D.tag == "Projectile")
+        {
+            Debug.Log("Heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
+            Projectile newP = collider2D.gameObject.GetComponent<Projectile>();
+            /*enemyHit(newP.AttackDamage);*/
+            Destroy(collider2D.gameObject);
+        }
+    }
+    public void enemyHit(int hitPoints)
+    {
+        if (MaxHealth - hitPoints > 0)
+        {
+            MaxHealth -= hitPoints;
+            /*anim.Play("Hurt");*/
+            /*GameManager.Instance.AudioSource.PlayOneShot(SoundManager.Instance.Hit);*/
+        }
+        else
+        {
+            /*anim.SetTrigger("didDie");*/
+            /*die();*/
+        }
+    }
+
+    /*public void die()
+    {
+        isDead = true;
+      *//*  enemyCollider.enabled = false;*/
+        /*GameManager.Instance.TotalKilled += 1;
+        GameManager.Instance.AudioSource.PlayOneShot(SoundManager.Instance.Death);
+        GameManager.Instance.AddMoney(rewardAmount);
+        GameManager.Instance.isWaveOver();*//*
+    }*/
     public void takeDamage(int damege)
     {
         this.currentHealth -= damege;
     }
 
-    ///Register - when enemy spawns
-    public void RegisterEnemy(Enemy enemy)
-    {
-        EnemyList.Add(enemy);
-    }
-    ///Unregister - When they escape the screen
-    public void UnregisterEnemy(Enemy enemy)
-    {
-        EnemyList.Remove(enemy);
-        Destroy(enemy.gameObject);
-    }
-    ///Destroy - At the end of the wave
-    public void DestroyAllEnemies()
-    {
-        foreach (Enemy enemy in EnemyList)
-        {
-            Destroy(enemy.gameObject);
-        }
-        EnemyList.Clear();
-    }
 
 }
