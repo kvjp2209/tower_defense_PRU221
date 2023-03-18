@@ -14,15 +14,7 @@ public class BatEnemy : Enemy
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            takeDamage(1);
-            healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
-            if (currentHealth <= 0)
-            {
-                gameObject.SetActive(false);
-            }
-        }
+       
         Move();
     }
 }

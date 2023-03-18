@@ -64,7 +64,15 @@ public class SpawnEnemy : MonoBehaviour
      void updateProperty()
     {
         size = 4 + Wave;
-        numberOfTypeEnemy = Wave;
+        if(Wave > 5)
+        {
+            numberOfTypeEnemy = 5;
+        }
+        else
+        {
+            numberOfTypeEnemy = Wave;
+        }
+        
         for (int i = 0; i < numberOfTypeEnemy; i++)
         {
             listEnemySpawn[i] = listTypeEnemy[i];

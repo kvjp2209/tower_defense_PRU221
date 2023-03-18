@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class BaseController : MonoBehaviour
 {
     [SerializeField]
-    GameObject panel;
+     GameObject panel;
     [SerializeField]
     Button btnBase;
     GameObject panelObject;
@@ -18,18 +18,18 @@ public class BaseController : MonoBehaviour
         yourButton.onClick.AddListener(ShowPanelClick);
     }
 
-
+    
     // Update is called once per frame
     void Update()
     {
-
+        
     }
     private void ShowPanelClick()
     {
         AudioManager.AudioInstance.PlaySFX("ButtonClick");
         panelObject = PanelObjectPool.shareInstance.GetPooledObject();
         panelObject.SetActive(true);
-        // Destroy(gameObject);
+       // Destroy(gameObject);
         panelObject.GetComponent<PanelController>().Base = this.gameObject;
     }
 }
