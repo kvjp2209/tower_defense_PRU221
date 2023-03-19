@@ -11,16 +11,16 @@ public abstract class Enemy : MonoBehaviour
     public int damage { get; set; }
     [SerializeField]
     public float MaxHealth;
+
     public HealthBarBehaviour healthBarBehaviour;
 
-
     private int waypointIndex;
+
     public void setUp()
     {
         currentHealth = MaxHealth;
         healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
     }
-
     public void getNormalPath()
     {
         int monsterPath = Random.Range(0, 2);
@@ -46,7 +46,6 @@ public abstract class Enemy : MonoBehaviour
                 WayPoints = GameObject.FindGameObjectWithTag("WaypointBat2").GetComponent<WayPoints>();
             }
     }
-
     public void Move()
     {
         transform.position = Vector2.MoveTowards(transform.position, WayPoints.wayPoints[waypointIndex].position, speed * Time.deltaTime);
@@ -59,6 +58,7 @@ public abstract class Enemy : MonoBehaviour
             }
             else
             {
+                HealthBarManager.instance.TakeDamage(MaxHealth);
                 Destroy(gameObject);
             }
         }
@@ -67,6 +67,12 @@ public abstract class Enemy : MonoBehaviour
     public void takeDamage(int damege)
     {
         this.currentHealth -= damege;
+        healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
+        if (currentHealth <= 0)
+        {
+            gameObject.SetActive(false);
+            CoinManager.instance.AddCoins((int)MaxHealth);
+        }
     }
 
     public void healing(int _value)

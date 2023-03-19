@@ -7,11 +7,13 @@ using UnityEngine.UI;
 public class BaseController : MonoBehaviour
 {
     [SerializeField]
-     GameObject panelObject;
+    Button btnBase;
+    GameObject panelObject;
     // Start is called before the first frame update
     void Start()
     {
-       
+        Button yourButton = btnBase.GetComponent<Button>();
+        yourButton.onClick.AddListener(ShowPanelClick);
     }
 
     
@@ -20,11 +22,12 @@ public class BaseController : MonoBehaviour
     {
         
     }
-    public void ShowPanelClick()
+    private void ShowPanelClick()
     {
-        AudioManager.AudioInstance.PlaySFX("ButtonClick");
-     //   panelObject = PanelObjectPool.shareInstance.GetPooledObject();
+      //  AudioManager.AudioInstance.PlaySFX("ButtonClick");
+        panelObject = PanelObjectPool.shareInstance.GetPooledObject();
         panelObject.SetActive(true);
+       // Destroy(gameObject);
         panelObject.GetComponent<PanelController>().Base = this.gameObject;
     }
 }
