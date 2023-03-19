@@ -21,7 +21,7 @@ public class NormalEnemy : Enemy
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            takeDamage(1);
+            takeDamage(3);
             healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
             if (currentHealth <= 0)
             {

@@ -99,7 +99,8 @@ public abstract class Enemy : MonoBehaviour
         {
             /*anim.SetTrigger("didDie");*/
             /*die();*/
-            Destroy(gameObject);
+            gameObject.SetActive(false);
+            /*Destroy(gameObject);*/
         }
     }
 

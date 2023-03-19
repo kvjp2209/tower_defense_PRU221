@@ -461,7 +461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  MaxHealth: 10
+  MaxHealth: 60
   healthBarBehaviour: {fileID: 8981033897227758887}
 --- !u!50 &2633453409763908002
 Rigidbody2D:
