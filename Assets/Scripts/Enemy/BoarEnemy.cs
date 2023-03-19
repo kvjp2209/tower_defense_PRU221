@@ -7,7 +7,6 @@ public class BoarEnemy : Enemy
     // Start is called before the first frame update
     void Start()
     {
-
         setUp();
         getNormalPath();
     }
@@ -18,11 +17,12 @@ public class BoarEnemy : Enemy
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            takeDamage(1);
+            takeDamage(30);
             healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
             if (currentHealth <= 0)
             {
                 gameObject.SetActive(false);
+                CoinManager.instance.AddCoins((int)MaxHealth);
             }
         }
         Move();
