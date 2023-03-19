@@ -62,6 +62,7 @@ public class SpawnEnemy : MonoBehaviour
     {
         size = 4 + Wave;
         if(Wave > 5) { numberOfTypeEnemy = 5; }
+        else
         {
             numberOfTypeEnemy = Wave;
         }

@@ -685,7 +685,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 124fb07793660e34dae09bf8259917c3, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2092,16 +2092,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf8845630d772d44bafe3281e91c8e7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSounds:
-  - name: MainMenuTheme
-    clip: {fileID: 8300000, guid: 124fb07793660e34dae09bf8259917c3, type: 3}
-  - name: BattleTheme
-    clip: {fileID: 8300000, guid: ced2d39fac3a3d84c81194f784d7ae9f, type: 3}
-  sfxSounds:
-  - name: ButtonClick
-    clip: {fileID: 8300000, guid: 6e68d49cfb40858488e971d445148762, type: 3}
-  - name: MusicBattleDefeat
-    clip: {fileID: 8300000, guid: 7129324f25748274a80db155a3302e8b, type: 3}
+  musicSounds: []
+  sfxSounds: []
   musicSource: {fileID: 264132149}
   sfxSource: {fileID: 1508259073}
 --- !u!1 &549925922
@@ -5757,7 +5749,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6e68d49cfb40858488e971d445148762, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0

@@ -5,9 +5,10 @@ using UnityEngine;
 
 public abstract class Enemy : MonoBehaviour
 {
+    Vector3 SpawnPoint = new Vector3(-17, -3, 0);
     public float speed;
     public WayPoints WayPoints { get; set; }
-    public float currentHealth { get; set; }
+    public float currentHealth;
     public int damage { get; set; }
     [SerializeField]
     public float MaxHealth;
@@ -46,20 +47,23 @@ public abstract class Enemy : MonoBehaviour
                 WayPoints = GameObject.FindGameObjectWithTag("WaypointBat2").GetComponent<WayPoints>();
             }
     }
-    public void Move()
+    public void Move(WayPoints waypoints)
     {
-        transform.position = Vector2.MoveTowards(transform.position, WayPoints.wayPoints[waypointIndex].position, speed * Time.deltaTime);
-        if (Vector2.Distance(transform.position, WayPoints.wayPoints[waypointIndex].position) < 0.1f)
+        
+        transform.position = Vector2.MoveTowards(transform.position, waypoints.wayPoints[waypointIndex].position, speed * Time.deltaTime);
+        if (Vector2.Distance(transform.position, waypoints.wayPoints[waypointIndex].position) < 0.1f)
         {
 
-            if (waypointIndex < WayPoints.wayPoints.Length - 1)
+            if (waypointIndex < waypoints.wayPoints.Length - 1)
             {
                 waypointIndex++;
             }
             else
             {
                 HealthBarManager.instance.TakeDamage(MaxHealth);
-                Destroy(gameObject);
+                gameObject.transform.position = SpawnPoint;
+                currentHealth = MaxHealth;
+                this.gameObject.SetActive(false);
             }
         }
     }
@@ -68,9 +72,11 @@ public abstract class Enemy : MonoBehaviour
     {
         this.currentHealth -= damege;
         healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
-        if (currentHealth <= 0)
+        if (this.currentHealth <= 0)
         {
-            gameObject.SetActive(false);
+            gameObject.transform.position = SpawnPoint;
+            currentHealth = MaxHealth;
+            this.gameObject.SetActive(false);
             CoinManager.instance.AddCoins((int)MaxHealth);
         }
     }

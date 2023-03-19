@@ -373,7 +373,7 @@ GameObject:
   - component: {fileID: 7969848938631968694}
   - component: {fileID: 338212933}
   m_Layer: 9
-  m_Name: Spider
+  m_Name: Nomal
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

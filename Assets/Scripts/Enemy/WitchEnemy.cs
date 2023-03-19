@@ -27,13 +27,8 @@ public class WitchEnemy : Enemy
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            takeDamage(30);
+            takeDamage(2);
             healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
-            if (currentHealth <= 0)
-            {
-                gameObject.SetActive(false);
-                CoinManager.instance.AddCoins((int)MaxHealth);
-            }
         }
 
         cooldownTimer += Time.deltaTime;
@@ -49,7 +44,7 @@ public class WitchEnemy : Enemy
             Healing();
         }
 
-        Move();
+        Move(WayPoints);
         curhealth = currentHealth;
     }
 
