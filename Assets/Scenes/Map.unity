@@ -3704,6 +3704,11 @@ GameObject:
   - component: {fileID: 1449485784}
   - component: {fileID: 1449485783}
   - component: {fileID: 1449485782}
+  - component: {fileID: 1449485791}
+  - component: {fileID: 1449485790}
+  - component: {fileID: 1449485789}
+  - component: {fileID: 1449485788}
+  - component: {fileID: 1449485787}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3897,6 +3902,81 @@ MonoBehaviour:
   pooledObjects: []
   objectToPool: {fileID: 3354938469936611947, guid: 56801798fc2a1fc46bee12e773d25ee0, type: 3}
   amountToPool: 7
+--- !u!114 &1449485787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449485775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8fb11e47ceba344db056959819c4ea0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectToPool: {fileID: 4493087289183215987, guid: 9e44756a8968ded4c971713c53efdf47, type: 3}
+  amountToPool: 10
+--- !u!114 &1449485788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449485775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69be5e0b30245944cb30c61219cd9b8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectToPool: {fileID: 7573589351957610283, guid: 97409ef9f7e6b4a408bb6ddd05308eb4, type: 3}
+  amountToPool: 10
+--- !u!114 &1449485789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449485775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f18d8e1a31626004480b5183f24fd6dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectToPool: {fileID: 931029395247512522, guid: 55103dde58f2ae949881240e22042d7e, type: 3}
+  amountToPool: 10
+--- !u!114 &1449485790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449485775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6346a249ca54c47409fa47be7d6170ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectToPool: {fileID: 5336867692907664496, guid: c3985bdc196362941a4307436fba40c5, type: 3}
+  amountToPool: 10
+--- !u!114 &1449485791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449485775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dcae04244e805743852aeb40d35524e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectToPool: {fileID: 5256111955156176379, guid: df597ad540bab384080b750a3b88bb86, type: 3}
+  amountToPool: 10
 --- !u!1 &1459689521
 GameObject:
   m_ObjectHideFlags: 0
