@@ -18,6 +18,7 @@ public abstract class Enemy : MonoBehaviour
 
     private int waypointIndex;
 
+
     public void setUp()
     {
         
@@ -27,8 +28,6 @@ public abstract class Enemy : MonoBehaviour
     public void getNormalPath()
     {
         int monsterPath = Random.Range(0, 2);
-        if (!isDead)
-        {
             if (monsterPath == 0)
             {
                 WayPoints = GameObject.FindGameObjectWithTag("WaypointNomal1").GetComponent<WayPoints>();
@@ -37,13 +36,10 @@ public abstract class Enemy : MonoBehaviour
             {
                 WayPoints = GameObject.FindGameObjectWithTag("WaypointNomal2").GetComponent<WayPoints>();
             }
-        }
     }
     public void getDirectPath()
     {
         int monsterPath = Random.Range(0, 2);
-        if (!isDead)
-        {
             if (monsterPath == 0)
             {
                 WayPoints = GameObject.FindGameObjectWithTag("WaypointBat1").GetComponent<WayPoints>();
@@ -52,7 +48,6 @@ public abstract class Enemy : MonoBehaviour
             {
                 WayPoints = GameObject.FindGameObjectWithTag("WaypointBat2").GetComponent<WayPoints>();
             }
-        }
     }
     public void Move(WayPoints waypoints)
     {
@@ -74,47 +69,6 @@ public abstract class Enemy : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collider2D)
-    {
-        Projectile newP = collider2D.gameObject.GetComponent<Projectile>();
-        if (collider2D.tag == "Projectile")
-        {
-            enemyHit(newP.AttackDamage);
-            Debug.Log("This is projectile dame " +newP.AttackDamage+ "The end!");
-            Destroy(collider2D.gameObject);
-        }else if (collider2D.tag == "SlimeProjectile" && newP.PType == projectileType.slime)
-        {
-            speed = 0.5f;
-            enemyHit(newP.AttackDamage);
-            Destroy(collider2D.gameObject);
-        }
-    }
-    public void enemyHit(int hitPoints)
-    {
-        if (MaxHealth - hitPoints > 0)
-        {
-            MaxHealth -= hitPoints;
-            /*anim.Play("Hurt");*/
-            /*GameManager.Instance.AudioSource.PlayOneShot(SoundManager.Instance.Hit);*/
-        }
-        else
-        {
-            /*anim.SetTrigger("didDie");*/
-            /*die();*/
-            gameObject.SetActive(false);
-            /*Destroy(gameObject);*/
-        }
-    }
-
-    public void die()
-    {
-        isDead = true;
-        /*enemyCollider.enabled = false;
-        GameManager.Instance.TotalKilled += 1;
-        GameManager.Instance.AudioSource.PlayOneShot(SoundManager.Instance.Death);
-        GameManager.Instance.AddMoney(rewardAmount);
-        GameManager.Instance.isWaveOver();*/
-    }
     public void takeDamage(int damege)
     {
         this.currentHealth -= damege;

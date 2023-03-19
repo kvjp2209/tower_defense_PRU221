@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 6637538401908160846}
   - component: {fileID: 7587704710314406334}
   - component: {fileID: 470082232694233976}
-  - component: {fileID: 8483706046680069915}
+  - component: {fileID: 3650385317291868567}
   m_Layer: 0
   m_Name: SlimeTower
   m_TagString: Untagged
@@ -310,9 +310,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8f3e14954531ea469fbb6925a150c76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 531286050804057258, guid: 63d12a4ed08c87e4ead1d08682df3731, type: 3}
   btnBase: {fileID: 6725796269639599081}
---- !u!114 &8483706046680069915
+--- !u!114 &3650385317291868567
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -321,12 +320,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 3354938469936611947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa6c72357936f6547ad682bc08465f0d, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d2f5b37b7f738b4a9bcbc82c800dcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
-  attackRadius: 7
-  projectile: {fileID: 5844516349274330829, guid: a5415e0a5b69cc14db7a8dee79f4bc4a, type: 3}
+  timeBetweenAttacks: 1
+  attackRadius: 5
+  projectile: {fileID: -3526050142781545143, guid: a5415e0a5b69cc14db7a8dee79f4bc4a, type: 3}
+  targetEnemy: {fileID: 0}
+  attackCounter: 0
+  isAttacking: 0
 --- !u!1 &3678381900440232805
 GameObject:
   m_ObjectHideFlags: 0

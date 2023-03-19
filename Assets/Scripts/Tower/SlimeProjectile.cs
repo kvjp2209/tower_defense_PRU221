@@ -1,12 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using UnityEngine;
 
-namespace Assets.Scripts.Tower
-{
-    internal class BowTower
+
+public class SlimeProjectile : Projectile
     {
+    void Start()
+    {
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+    void OnTriggerEnter2D(Collider2D collider2D)
+    {
+        Enemy newP = collider2D.gameObject.GetComponent<Enemy>();
+        if (collider2D.tag == "Enemy")
+        {
+            newP.speed = 0.5f;
+            newP.takeDamage(attackDamage);
+        }
     }
 }
+

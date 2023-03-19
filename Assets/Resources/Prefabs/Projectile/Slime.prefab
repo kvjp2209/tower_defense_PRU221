@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6013366557875850435}
   - component: {fileID: -2870028812592280907}
-  - component: {fileID: 5844516349274330829}
   - component: {fileID: 312249186635655890}
+  - component: {fileID: -3526050142781545143}
   m_Layer: 0
   m_Name: Slime
   m_TagString: SlimeProjectile
@@ -86,20 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5844516349274330829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2464478299558298700}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a10a46ba2467fd94594e77078a3b8a15, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackDamage: 5
-  pType: 1
 --- !u!58 &312249186635655890
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -116,3 +102,18 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &-3526050142781545143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2464478299558298700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 046c3ca36d609d349ac0d11f0593cf94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDamage: 2
+  pType: 1
+  enemy: {fileID: 0}
