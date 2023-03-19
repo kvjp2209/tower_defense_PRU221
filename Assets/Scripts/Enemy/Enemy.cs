@@ -49,11 +49,9 @@ public abstract class Enemy : MonoBehaviour
     }
     public void Move(WayPoints waypoints)
     {
-        
         transform.position = Vector2.MoveTowards(transform.position, waypoints.wayPoints[waypointIndex].position, speed * Time.deltaTime);
         if (Vector2.Distance(transform.position, waypoints.wayPoints[waypointIndex].position) < 0.1f)
         {
-
             if (waypointIndex < waypoints.wayPoints.Length - 1)
             {
                 waypointIndex++;
@@ -61,6 +59,7 @@ public abstract class Enemy : MonoBehaviour
             else
             {
                 HealthBarManager.instance.TakeDamage(MaxHealth);
+                waypointIndex = 0;
                 gameObject.transform.position = SpawnPoint;
                 currentHealth = MaxHealth;
                 this.gameObject.SetActive(false);
@@ -74,6 +73,7 @@ public abstract class Enemy : MonoBehaviour
         healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
         if (this.currentHealth <= 0)
         {
+            waypointIndex = 0;
             gameObject.transform.position = SpawnPoint;
             currentHealth = MaxHealth;
             this.gameObject.SetActive(false);
