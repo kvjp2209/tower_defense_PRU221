@@ -5,29 +5,21 @@ using UnityEngine;
 
 public class NormalEnemy : Enemy
 {
-   
-    
     // Start is called before the first frame update
     void Start()
     {
-
        setUp();
-        getNormalPath();
+       getNormalPath();
     }
-
 
     // Update is called once per frame
     void Update()
     {
+        Move(WayPoints);
         if (Input.GetKeyDown(KeyCode.W))
         {
-            takeDamage(3);
+            takeDamage(2);
             healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
-            if (currentHealth <= 0)
-            {
-                gameObject.SetActive(false);
-            }
         }
-        Move();
     }
 }

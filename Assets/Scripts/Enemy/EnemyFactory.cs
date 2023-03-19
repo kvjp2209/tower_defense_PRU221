@@ -11,72 +11,31 @@ public class EnemyFactory : MonoBehaviour
         switch (type)
         {
             case "bat":
-
-                var BatPrefabs = Resources.Load("Prefabs/Enemy/Bat") as GameObject;
-                Debug.Log("Created");
-                if (BatPrefabs != null)
-                {
-                    enemy = Instantiate(BatPrefabs, SpawnPoint, Quaternion.identity);
-                    return enemy;
-                }
-                else
-                {
-                    throw new System.ArgumentException("Prefab does not exist.");
-
-                }
+                enemy = BatObjectPool.shareInstance.GetPooledObject();
+                enemy.SetActive(true);
+                enemy.transform.position = SpawnPoint;
+                return enemy;
                 
             case "boar":
-                var BoarPrefabs = Resources.Load("Prefabs/Enemy/BigBoar") as GameObject;
-                Debug.Log("Created");
-                if (BoarPrefabs != null)
-                {
-                    enemy = Instantiate(BoarPrefabs, SpawnPoint, Quaternion.identity);
-                    return enemy;
-                }
-                else
-                {
-                    throw new System.ArgumentException("Prefab does not exist.");
-
-                }
+                enemy = BoarObjectBool.shareInstance.GetPooledObject();
+                enemy.SetActive(true);
+                enemy.transform.position = SpawnPoint;
+                return enemy;
             case "goblin":
-                var GoblinPrefabs = Resources.Load("Prefabs/Enemy/GoblinAxe") as GameObject;
-                Debug.Log("Created");
-                if (GoblinPrefabs != null)
-                {
-                    enemy = Instantiate(GoblinPrefabs, SpawnPoint, Quaternion.identity);
-                    return enemy;
-                }
-                else
-                {
-                    throw new System.ArgumentException("Prefab does not exist.");
-
-                }
+                enemy = GoblinObjectPool.shareInstance.GetPooledObject();
+                enemy.SetActive(true);
+                enemy.transform.position = SpawnPoint;
+                return enemy;
             case "witch":
-                var WitchPrefabs = Resources.Load("Prefabs/Enemy/SkeletonMage") as GameObject;
-                Debug.Log("Created");
-                if (WitchPrefabs != null)
-                {
-                    enemy = Instantiate(WitchPrefabs, SpawnPoint, Quaternion.identity);
-                    return enemy;
-                }
-                else
-                {
-                    throw new System.ArgumentException("Prefab does not exist.");
-
-                }
+                enemy = WitchObjectPool.shareInstance.GetPooledObject();
+                enemy.SetActive(true);
+                enemy.transform.position = SpawnPoint;
+                return enemy;
             case "normal":
-                var NormalPrefabs = Resources.Load("Prefabs/Enemy/Spider") as GameObject;
-                Debug.Log("Created");
-                if (NormalPrefabs != null)
-                {
-                    enemy = Instantiate(NormalPrefabs, SpawnPoint, Quaternion.identity);
-                    return enemy;
-                }
-                else
-                {
-                    throw new System.ArgumentException("Prefab does not exist.");
-
-                }
+                enemy = NormalObjectPool.shareInstance.GetPooledObject();
+                enemy.SetActive(true);
+                enemy.transform.position = SpawnPoint;
+                return enemy;
         }
         return null;
     }

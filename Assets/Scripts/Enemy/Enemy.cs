@@ -1,3 +1,4 @@
+using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,10 +6,11 @@ using static UnityEngine.GraphicsBuffer;
 
 public abstract class Enemy : MonoBehaviour
 {
+    Vector3 SpawnPoint = new Vector3(-17, -3, 0);
     public float speed;
     public WayPoints WayPoints { get; set; }
-    public float currentHealth { get; set; }
-
+    public float currentHealth;
+    public int damage { get; set; }
     [SerializeField]
     public float MaxHealth;
 
@@ -16,14 +18,11 @@ public abstract class Enemy : MonoBehaviour
 
     private int waypointIndex;
 
-    bool isDead = false;
-
     public void setUp()
     {
         
         currentHealth = MaxHealth;
         healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
-
     }
     public void getNormalPath()
     {
@@ -55,19 +54,22 @@ public abstract class Enemy : MonoBehaviour
             }
         }
     }
-    public void Move()
+    public void Move(WayPoints waypoints)
     {
-        transform.position = Vector2.MoveTowards(transform.position, WayPoints.wayPoints[waypointIndex].position, speed * Time.deltaTime);
-        if (Vector2.Distance(transform.position, WayPoints.wayPoints[waypointIndex].position) < 0.1f)
+        transform.position = Vector2.MoveTowards(transform.position, waypoints.wayPoints[waypointIndex].position, speed * Time.deltaTime);
+        if (Vector2.Distance(transform.position, waypoints.wayPoints[waypointIndex].position) < 0.1f)
         {
-
-            if (waypointIndex < WayPoints.wayPoints.Length - 1)
+            if (waypointIndex < waypoints.wayPoints.Length - 1)
             {
                 waypointIndex++;
             }
             else
             {
-                Destroy(gameObject);
+                HealthBarManager.instance.TakeDamage(MaxHealth);
+                waypointIndex = 0;
+                gameObject.transform.position = SpawnPoint;
+                currentHealth = MaxHealth;
+                this.gameObject.SetActive(false);
             }
         }
     }
@@ -116,7 +118,21 @@ public abstract class Enemy : MonoBehaviour
     public void takeDamage(int damege)
     {
         this.currentHealth -= damege;
+        healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
+        if (this.currentHealth <= 0)
+        {
+            waypointIndex = 0;
+            gameObject.transform.position = SpawnPoint;
+            currentHealth = MaxHealth;
+            this.gameObject.SetActive(false);
+            CoinManager.instance.AddCoins((int)MaxHealth);
+        }
     }
 
+    public void healing(int _value)
+    {
+        this.currentHealth = Mathf.Clamp(currentHealth + _value, 0, MaxHealth);
+        healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
+    }
 
 }

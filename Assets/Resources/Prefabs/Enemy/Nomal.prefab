@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4229629508889579282}
   - component: {fileID: 7968552986453690073}
   - component: {fileID: 8981033897227758887}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Canvas (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 870277304955151325}
   - component: {fileID: 5897316360031119016}
   - component: {fileID: 9044631960891771391}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 2350076711401758174}
   - component: {fileID: 6433763742260136983}
   - component: {fileID: 8345744801933230823}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -280,7 +280,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1454434607913750182}
   - component: {fileID: 6866285003068371805}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -371,10 +371,9 @@ GameObject:
   - component: {fileID: 1742708897320986023}
   - component: {fileID: 8990450806488560564}
   - component: {fileID: 7969848938631968694}
-  - component: {fileID: 2633453409763908002}
-  - component: {fileID: 452809304731425315}
-  m_Layer: 0
-  m_Name: Spider
+  - component: {fileID: 338212933}
+  m_Layer: 9
+  m_Name: Nomal
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -436,7 +435,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -105774645
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: a76678c6420f2ef4baef80f1d3e7e329, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -461,30 +460,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  MaxHealth: 60
+  MaxHealth: 10
   healthBarBehaviour: {fileID: 8981033897227758887}
---- !u!50 &2633453409763908002
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7573589351957610283}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &452809304731425315
+--- !u!61 &338212933
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -497,18 +475,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0111916065, y: -0.14549124}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.84, y: 1.26}
+    oldSize: {x: 2.6285715, y: 1.8}
     newSize: {x: 1.84, y: 1.26}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.84, y: 1.26}
+  m_Size: {x: 2.00184, y: 1.5090175}
   m_EdgeRadius: 0
 --- !u!1 &8929497344034570037
 GameObject:
@@ -519,7 +497,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5170460471690315217}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}

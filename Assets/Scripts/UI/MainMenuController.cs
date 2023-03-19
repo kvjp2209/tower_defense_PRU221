@@ -4,30 +4,69 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class SettingQuitGameUI : MonoBehaviour
+public class MainMenuController : MonoBehaviour
 {
+    public GameObject menuOptions;
+    public GameObject infoEnemyPage;
     public GameObject settingPanel;
+    public GameObject buttons;
+    public GameObject mainGameLogo;
     public Slider musicSlider, sfxSlider;
     private void Start()
     {
         musicSlider.value = AudioManager.AudioInstance.musicSource.volume;
         sfxSlider.value = AudioManager.AudioInstance.sfxSource.volume;
-        AudioManager.AudioInstance.PlayMusic("BattleTheme");
+        AudioManager.AudioInstance.PlayMusic("MainMenuTheme");
+    }
+
+    public void StartGameButton()
+    {
+        AudioManager.AudioInstance.PlaySFX("ButtonClick");
+        menuOptions.SetActive(true);
+        buttons.SetActive(false);
+        mainGameLogo.SetActive(false);   
+    }
+    public void CloseMenuButton()
+    {
+        AudioManager.AudioInstance.PlaySFX("ButtonClick");
+        menuOptions.SetActive(false);
+        buttons.SetActive(true);
+        mainGameLogo.SetActive(true);   
+    }
+    public void EnemyInfoMenu()
+    {
+        AudioManager.AudioInstance.PlaySFX("ButtonClick");
+        infoEnemyPage.SetActive(true);
+    }
+    public void CloseInfoMenu()
+    {
+        AudioManager.AudioInstance.PlaySFX("ButtonClick");
+        infoEnemyPage.SetActive(false);
+    }
+
+    public void StartNewGame()
+    {
+        AudioManager.AudioInstance.PlaySFX("ButtonClick");
+        SceneManager.LoadScene("Map");
     }
     public void QuitGameButton()
     {
         AudioManager.AudioInstance.PlaySFX("ButtonClick");
-        SceneManager.LoadScene("MenuScene");
+        Application.Quit();
     }
     public void SettingButton()
     {
         AudioManager.AudioInstance.PlaySFX("ButtonClick");
         settingPanel.SetActive(!settingPanel.activeSelf);
+        buttons.SetActive(!buttons.activeSelf);
+        mainGameLogo.SetActive(!mainGameLogo.activeSelf);
     }
-    public void BackButton()
+    public void CloseSettingButton()
     {
         AudioManager.AudioInstance.PlaySFX("ButtonClick");
         settingPanel.SetActive(!settingPanel.activeSelf);
+        buttons.SetActive(!buttons.activeSelf);
+        mainGameLogo.SetActive(!mainGameLogo.activeSelf);
     }
     public void ToggleMusicButton(Button button)
     {

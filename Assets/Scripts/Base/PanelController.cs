@@ -21,17 +21,6 @@ public class PanelController : MonoBehaviour
     [SerializeField]
     Button ExitButton;
 
-    //Prefabs
-    [SerializeField]
-    GameObject BowTowerPrefab;
-    [SerializeField]
-    GameObject FireTowerPrefab;
-    [SerializeField]
-    GameObject MageTowerPrefab;
-    [SerializeField]
-    GameObject SlimeTowerPrefab;
-    [SerializeField]
-    GameObject BombTowerPrefab;
 
     //coin
     [SerializeField]
@@ -64,7 +53,9 @@ public class PanelController : MonoBehaviour
     private void BowTowerClick()
     {
         GameObject Tower;
-        Tower = Instantiate(BowTowerPrefab, Base.transform.position, Quaternion.identity);
+        Tower = BowTowerObjectPool.shareInstance.GetPooledObject();
+        Tower.SetActive(true);
+        Tower.transform.position = Base.transform.position;
         Base.SetActive(false);
         Base = Tower;
         int coin = int.Parse(BowCoin.text);
@@ -74,7 +65,9 @@ public class PanelController : MonoBehaviour
     private void SlimeTowerClick()
     {
         GameObject Tower;
-        Tower = Instantiate(SlimeTowerPrefab, Base.transform.position, Quaternion.identity);
+        Tower = SlimeTowerObjectPool.shareInstance.GetPooledObject();
+        Tower.SetActive(true);
+        Tower.transform.position = Base.transform.position;
         Base.SetActive(false);
         Base = Tower;
         AudioManager.AudioInstance.PlaySFX("ButtonClick");
@@ -83,7 +76,9 @@ public class PanelController : MonoBehaviour
     private void MageTowerClick()
     {
         GameObject Tower;
-        Tower = Instantiate(MageTowerPrefab, Base.transform.position, Quaternion.identity);
+        Tower = MageTowerObjectPool.shareInstance.GetPooledObject();
+        Tower.SetActive(true);
+        Tower.transform.position = Base.transform.position;
         Base.SetActive(false);
         Base = Tower;
         AudioManager.AudioInstance.PlaySFX("ButtonClick");
@@ -92,7 +87,9 @@ public class PanelController : MonoBehaviour
     private void FireTowerClick()
     {
         GameObject Tower;
-        Tower = Instantiate(FireTowerPrefab, Base.transform.position, Quaternion.identity);
+        Tower = FireTowerObjectPool.shareInstance.GetPooledObject();
+        Tower.SetActive(true);
+        Tower.transform.position = Base.transform.position;
         Base.SetActive(false);
         Base = Tower;
         AudioManager.AudioInstance.PlaySFX("ButtonClick");
@@ -101,7 +98,9 @@ public class PanelController : MonoBehaviour
     private void BombTowerClick()
     {
         GameObject Tower;
-        Tower = Instantiate(BombTowerPrefab, Base.transform.position, Quaternion.identity);
+        Tower = BombTowerObjectPool.shareInstance.GetPooledObject();
+        Tower.SetActive(true);
+        Tower.transform.position = Base.transform.position;
         Base.SetActive(false);
         Base = Tower;
         AudioManager.AudioInstance.PlaySFX("ButtonClick");

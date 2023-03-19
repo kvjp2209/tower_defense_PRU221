@@ -7,8 +7,6 @@ using UnityEngine.UI;
 public class BaseController : MonoBehaviour
 {
     [SerializeField]
-     GameObject panel;
-    [SerializeField]
     Button btnBase;
     GameObject panelObject;
     // Start is called before the first frame update
@@ -26,7 +24,7 @@ public class BaseController : MonoBehaviour
     }
     private void ShowPanelClick()
     {
-        AudioManager.AudioInstance.PlaySFX("ButtonClick");
+      //  AudioManager.AudioInstance.PlaySFX("ButtonClick");
         panelObject = PanelObjectPool.shareInstance.GetPooledObject();
         panelObject.SetActive(true);
        // Destroy(gameObject);

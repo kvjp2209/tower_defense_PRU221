@@ -4,68 +4,46 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class MainMenuController : MonoBehaviour
+public class SettingQuitGameUI : MonoBehaviour
 {
-    public GameObject menuOptions;
-    public GameObject infoEnemyPage;
     public GameObject settingPanel;
-    public GameObject buttons;
-    public GameObject mainGameLogo;
+    public GameObject quitGameConfirmPanel;
     public Slider musicSlider, sfxSlider;
     private void Start()
     {
         musicSlider.value = AudioManager.AudioInstance.musicSource.volume;
         sfxSlider.value = AudioManager.AudioInstance.sfxSource.volume;
-        AudioManager.AudioInstance.PlayMusic("MainMenuTheme");
-    }
-    public void StartGameButton()
-    {
-        AudioManager.AudioInstance.PlaySFX("ButtonClick");
-        menuOptions.SetActive(true);
-        buttons.SetActive(false);
-        mainGameLogo.SetActive(false);   
-    }
-    public void CloseMenuButton()
-    {
-        AudioManager.AudioInstance.PlaySFX("ButtonClick");
-        menuOptions.SetActive(false);
-        buttons.SetActive(true);
-        mainGameLogo.SetActive(true);   
-    }
-    public void EnemyInfoMenu()
-    {
-        AudioManager.AudioInstance.PlaySFX("ButtonClick");
-        infoEnemyPage.SetActive(true);
-    }
-    public void CloseInfoMenu()
-    {
-        AudioManager.AudioInstance.PlaySFX("ButtonClick");
-        infoEnemyPage.SetActive(false);
-    }
-
-    public void StartNewGame()
-    {
-        AudioManager.AudioInstance.PlaySFX("ButtonClick");
-        SceneManager.LoadScene("Map");
+        AudioManager.AudioInstance.PlayMusic("BattleTheme");
     }
     public void QuitGameButton()
     {
+        Time.timeScale = 0;
         AudioManager.AudioInstance.PlaySFX("ButtonClick");
-        Application.Quit();
+        quitGameConfirmPanel.SetActive(true);
     }
     public void SettingButton()
     {
+        Time.timeScale = 0;
         AudioManager.AudioInstance.PlaySFX("ButtonClick");
         settingPanel.SetActive(!settingPanel.activeSelf);
-        buttons.SetActive(!buttons.activeSelf);
-        mainGameLogo.SetActive(!mainGameLogo.activeSelf);
     }
-    public void CloseSettingButton()
+    public void SettingBackButton()
     {
+        Time.timeScale = 1;
         AudioManager.AudioInstance.PlaySFX("ButtonClick");
         settingPanel.SetActive(!settingPanel.activeSelf);
-        buttons.SetActive(!buttons.activeSelf);
-        mainGameLogo.SetActive(!mainGameLogo.activeSelf);
+    }
+    public void QuitBackButton()
+    {
+        Time.timeScale = 1;
+        AudioManager.AudioInstance.PlaySFX("ButtonClick");
+        quitGameConfirmPanel.SetActive(!quitGameConfirmPanel.activeSelf);
+    }
+    public void QuitConfirmButton()
+    {
+        Time.timeScale = 1;
+        AudioManager.AudioInstance.PlaySFX("ButtonClick");
+        SceneManager.LoadScene("MenuScene");
     }
     public void ToggleMusicButton(Button button)
     {
