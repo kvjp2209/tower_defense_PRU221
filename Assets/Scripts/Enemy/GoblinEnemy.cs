@@ -17,11 +17,12 @@ public class GoblinEnemy : Enemy
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            takeDamage(1);
+            takeDamage(30);
             healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
             if (currentHealth <= 0)
             {
                 Destroy(gameObject);
+                CoinManager.instance.AddCoins((int)MaxHealth);
             }
         }
         Move();

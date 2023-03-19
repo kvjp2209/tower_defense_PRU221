@@ -18,6 +18,7 @@ public class MainMenuController : MonoBehaviour
         sfxSlider.value = AudioManager.AudioInstance.sfxSource.volume;
         AudioManager.AudioInstance.PlayMusic("MainMenuTheme");
     }
+
     public void StartGameButton()
     {
         AudioManager.AudioInstance.PlaySFX("ButtonClick");
