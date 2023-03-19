@@ -66,5 +66,11 @@ public abstract class Enemy : MonoBehaviour
     public void takeDamage(int damege)
     {
         this.currentHealth -= damege;
+        healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
+        if (currentHealth <= 0)
+        {
+            gameObject.SetActive(false);
+            CoinManager.instance.AddCoins((int)MaxHealth);
+        }
     }
 }
