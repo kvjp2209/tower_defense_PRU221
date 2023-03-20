@@ -13,28 +13,23 @@ public class EnemyFactory : MonoBehaviour
             case "bat":
                 enemy = BatObjectPool.shareInstance.GetPooledObject();
                 enemy.SetActive(true);
-                enemy.transform.position = SpawnPoint;
                 return enemy;
                 
             case "boar":
                 enemy = BoarObjectBool.shareInstance.GetPooledObject();
                 enemy.SetActive(true);
-                enemy.transform.position = SpawnPoint;
                 return enemy;
             case "goblin":
                 enemy = GoblinObjectPool.shareInstance.GetPooledObject();
                 enemy.SetActive(true);
-                enemy.transform.position = SpawnPoint;
                 return enemy;
             case "witch":
                 enemy = WitchObjectPool.shareInstance.GetPooledObject();
                 enemy.SetActive(true);
-                enemy.transform.position = SpawnPoint;
                 return enemy;
             case "normal":
                 enemy = NormalObjectPool.shareInstance.GetPooledObject();
                 enemy.SetActive(true);
-                enemy.transform.position = SpawnPoint;
                 return enemy;
         }
         return null;
