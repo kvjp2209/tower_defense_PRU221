@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 6247703236999382617}
   - component: {fileID: 7809641625277284968}
   - component: {fileID: 2126628541539547819}
-  m_Layer: 0
+  - component: {fileID: 170303302}
+  m_Layer: 9
   m_Name: SkeletonMage
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -102,6 +103,40 @@ MonoBehaviour:
   description: The witch will move slowly, healing enemies within range every second.
   MaxHealth: 100
   healthBarBehaviour: {fileID: 7147931199482379999}
+  attackCooldown: 4
+  range: 3
+  boxCollider: {fileID: 170303302}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  damageSpec: 2
+  curhealth: 0
+--- !u!61 &170303302
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4493087289183215987}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.08764902, y: -0.14399469}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 2.15}
+    newSize: {x: 3, y: 2.15}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.297106, y: 1.8620107}
+  m_EdgeRadius: 0
 --- !u!1 &5339739327084854158
 GameObject:
   m_ObjectHideFlags: 0
@@ -111,7 +146,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4962883125307226734}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +184,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5040434137849660547}
   - component: {fileID: 6395373162121669283}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +277,7 @@ GameObject:
   - component: {fileID: 2658006705134940726}
   - component: {fileID: 9113323311193146987}
   - component: {fileID: 7147931199482379999}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Canvas (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -358,7 +393,7 @@ GameObject:
   - component: {fileID: 7018062579096032518}
   - component: {fileID: 5532994450024982820}
   - component: {fileID: 7605083695275267137}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -434,7 +469,7 @@ GameObject:
   - component: {fileID: 3883176637684742283}
   - component: {fileID: 2557043145798440319}
   - component: {fileID: 6333738045892218982}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}

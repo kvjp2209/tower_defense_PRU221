@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6879533324099108749}
   - component: {fileID: 6364338817560915066}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,8 @@ GameObject:
   - component: {fileID: 8999730068266034745}
   - component: {fileID: 5813700300307065514}
   - component: {fileID: 2103940555523228954}
-  m_Layer: 0
+  - component: {fileID: 7656456333534294537}
+  m_Layer: 9
   m_Name: GoblinAxe
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -193,6 +194,32 @@ MonoBehaviour:
     monsters.
   MaxHealth: 150
   healthBarBehaviour: {fileID: 4052929003041407480}
+--- !u!61 &7656456333534294537
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931029395247512522}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.078341484, y: -0.050362468}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.1, y: 2.2}
+    newSize: {x: 3.1, y: 2.2}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.7793865, y: 1.5620768}
+  m_EdgeRadius: 0
 --- !u!1 &2961019033842664044
 GameObject:
   m_ObjectHideFlags: 0
@@ -202,7 +229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3662775750998922984}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -241,7 +268,7 @@ GameObject:
   - component: {fileID: 5276614254893928620}
   - component: {fileID: 497097140851406347}
   - component: {fileID: 6380410120593382654}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -317,7 +344,7 @@ GameObject:
   - component: {fileID: 8546053947059559708}
   - component: {fileID: 6109419857489241926}
   - component: {fileID: 9117879130491564978}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -395,7 +422,7 @@ GameObject:
   - component: {fileID: 6249989932187542241}
   - component: {fileID: 9196352724236665304}
   - component: {fileID: 4052929003041407480}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Canvas (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
