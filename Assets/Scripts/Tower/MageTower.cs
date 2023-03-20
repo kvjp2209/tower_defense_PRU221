@@ -1,60 +1,69 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class MageTower : Tower
-    {
+public class MageTower : MonoBehaviour
+{
+    public float range = 5f;
+    public float fireRate = 1f;
+
+    private float fireCountdown = 0f;
+    private List<Transform> targets = new List<Transform>();
+
+    public GameObject bulletPrefab;
+    public Transform firePoint;
+
     void Start()
     {
-
+        InvokeRepeating("UpdateTargets", 0f, 0.5f);
     }
 
-    // Update is called once per frame
+    void UpdateTargets()
+    {
+        targets.Clear();
+
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(transform.position, range);
+
+        foreach (Collider2D collider in colliders)
+        {
+            if (collider.tag == "Enemy")
+            {
+                targets.Add(collider.transform);
+            }
+        }
+    }
+
     void Update()
     {
-        attackCounter -= Time.deltaTime;
-        if (targetEnemy == null)
-        {
-            GameObject nearestEnemy = GetNearestEnemy();
-            if (nearestEnemy != null && Vector2.Distance(transform.localPosition, nearestEnemy.transform.localPosition) <= attackRadius)
-            {
-                targetEnemy = nearestEnemy;
-            }
-        }
-        else
-        {
-            if (attackCounter <= 0f)
-            {
-                isAttacking = true;
-                attackCounter = timeBetweenAttacks;
-            }
-            else
-            {
-                isAttacking = false;
-            }
-            if (Vector2.Distance(transform.position, targetEnemy.transform.position) > attackRadius)
-            {
-                targetEnemy = null;
-            }
-            else if (!targetEnemy.activeSelf)
-            {
-                targetEnemy = null;
-            }
-        }
-        if (isAttacking == true) { Attack(); }
-    }
-    /*public GameObject GetEnemyInRange()
-    {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        if (enemies.Length > 0)
-        {
-            foreach (GameObject enemy in enemies)
-            {
-                if (Vector2.Distance(enemy.transform.localPosition, transform.position) <= attackRadius)
-                {
-                    closestEnemy = enemy;
-                }
-            }
-        }
-        return closestEnemy;
-    }*/
-}
+        if (targets.Count == 0)
+            return;
 
+        if (fireCountdown <= 0f)
+        {
+            Fire();
+            fireCountdown = 1f / fireRate;
+        }
+
+        fireCountdown -= Time.deltaTime;
+    }
+
+    void Fire()
+    {
+        foreach (Transform target in targets)
+        {
+            GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            MageProjectile bullet = bulletGO.GetComponent<MageProjectile>();
+
+            if (bullet != null)
+            {
+                bullet.Seek(target);
+            }
+        }
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, range);
+    }
+}

@@ -335,7 +335,7 @@ GameObject:
   - component: {fileID: 6637538401908160846}
   - component: {fileID: 7587704710314406334}
   - component: {fileID: 470082232694233976}
-  - component: {fileID: 8483706046680069915}
+  - component: {fileID: 2247053095243292745}
   m_Layer: 0
   m_Name: MageTower
   m_TagString: Untagged
@@ -398,7 +398,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1365871043
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 3dd77262270d4734286b33da08fd20e5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -423,9 +423,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8f3e14954531ea469fbb6925a150c76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 531286050804057258, guid: 63d12a4ed08c87e4ead1d08682df3731, type: 3}
   btnBase: {fileID: 6725796269639599081}
---- !u!114 &8483706046680069915
+--- !u!114 &2247053095243292745
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -434,12 +433,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 3354938469936611947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa6c72357936f6547ad682bc08465f0d, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ff26a7333cca734f8f2bb6769ea05d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
-  attackRadius: 7
-  projectile: {fileID: 5844516349274330829, guid: a5415e0a5b69cc14db7a8dee79f4bc4a, type: 3}
+  range: 5
+  fireRate: 1
+  bulletPrefab: {fileID: 2464478299558298700, guid: 72ddbe2da1a1b464a8b86dd29a82108d, type: 3}
+  firePoint: {fileID: 6637538401908160846}
 --- !u!1 &4965745975280194689
 GameObject:
   m_ObjectHideFlags: 0
