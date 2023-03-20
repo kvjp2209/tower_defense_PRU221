@@ -19,6 +19,7 @@ public class BoarEnemy : Enemy
     void Update()
     {
         Move(WayPoints);
+        checkHealth(WayPoints);
         if (Input.GetKeyDown(KeyCode.W))
         {
             takeDamage(2);

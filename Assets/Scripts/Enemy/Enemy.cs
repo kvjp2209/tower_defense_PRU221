@@ -73,7 +73,7 @@ public abstract class Enemy : MonoBehaviour
             {
                 HealthBarManager.instance.TakeDamage(MaxHealth);
                 waypointIndex = 0;
-                gameObject.transform.position = SpawnPoint;
+                gameObject.transform.position = waypoints.wayPoints[0].position;
                 currentHealth = MaxHealth;
                 this.gameObject.SetActive(false);
             }
@@ -84,14 +84,7 @@ public abstract class Enemy : MonoBehaviour
     {
         this.currentHealth -= damege;
         healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
-        if (this.currentHealth <= 0)
-        {
-            waypointIndex = 0;
-            gameObject.transform.position = SpawnPoint;
-            currentHealth = MaxHealth;
-            this.gameObject.SetActive(false);
-            CoinManager.instance.AddCoins((int)MaxHealth);
-        }
+      
     }
 
     public void healing(int _value)
@@ -99,5 +92,15 @@ public abstract class Enemy : MonoBehaviour
         this.currentHealth = Mathf.Clamp(currentHealth + _value, 0, MaxHealth);
         healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
     }
-
+    public void checkHealth(WayPoints wayPoints)
+    {
+        if (this.currentHealth <= 0)
+        {
+            waypointIndex = 0;
+            currentHealth = MaxHealth;
+            this.gameObject.SetActive(false);
+            gameObject.transform.position = wayPoints.wayPoints[0].position;
+            CoinManager.instance.AddCoins((int)MaxHealth);
+        }
+    }
 }
