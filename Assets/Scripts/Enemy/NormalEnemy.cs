@@ -10,21 +10,17 @@ public class NormalEnemy : Enemy
     {
        setUp();
        getNormalPath();
+       description = "Spiders will move at a slow speed with base health.";
     }
 
     // Update is called once per frame
     void Update()
     {
+        Move(WayPoints);
         if (Input.GetKeyDown(KeyCode.W))
         {
-            takeDamage(30);
+            takeDamage(2);
             healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
-            if (currentHealth <= 0)
-            {
-                gameObject.SetActive(false);
-                CoinManager.instance.AddCoins((int)MaxHealth);
-            }
         }
-        Move();
     }
 }

@@ -9,22 +9,17 @@ public class GoblinEnemy : Enemy
     {
         setUp();
         getNormalPath();
+        description = "Goblins possessing high health and speed are also greater than normal monsters.";
     }
-
 
     // Update is called once per frame
     void Update()
     {
+        Move(WayPoints);
         if (Input.GetKeyDown(KeyCode.W))
         {
-            takeDamage(30);
+            takeDamage(2);
             healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
-            if (currentHealth <= 0)
-            {
-                Destroy(gameObject);
-                CoinManager.instance.AddCoins((int)MaxHealth);
-            }
         }
-        Move();
     }
 }

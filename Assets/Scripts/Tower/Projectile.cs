@@ -4,13 +4,13 @@ public enum projectileType
 {
     arrow, slime, fireball, mage, bomb
 };
-public class Projectile : MonoBehaviour
+public abstract class Projectile : MonoBehaviour
 {
-    [SerializeField]
-    int attackDamage;
+    public int attackDamage;
 
-    [SerializeField]
-    projectileType pType;
+    public projectileType pType;
+
+    public Enemy enemy;
 
     public int AttackDamage
     {

@@ -66,8 +66,8 @@ TagManager:
   - name: UI
     uniqueID: 1549305665
     locked: 0
-  - name: Enemy
-    uniqueID: 398787365
+  - name: Projectile
+    uniqueID: 742205985
     locked: 0
   - name: Minimap
     uniqueID: 851825383

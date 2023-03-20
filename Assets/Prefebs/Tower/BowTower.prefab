@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 6637538401908160846}
   - component: {fileID: 7587704710314406334}
   - component: {fileID: 470082232694233976}
-  - component: {fileID: 8483706046680069915}
+  - component: {fileID: 1181500284627649062}
   m_Layer: 0
   m_Name: BowTower
   m_TagString: Untagged
@@ -310,9 +310,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8f3e14954531ea469fbb6925a150c76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 531286050804057258, guid: 63d12a4ed08c87e4ead1d08682df3731, type: 3}
   btnBase: {fileID: 6725796269639599081}
---- !u!114 &8483706046680069915
+--- !u!114 &1181500284627649062
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -321,12 +320,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 3354938469936611947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa6c72357936f6547ad682bc08465f0d, type: 3}
+  m_Script: {fileID: 11500000, guid: ef957854dca2de94688b90eabc43e897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
+  timeBetweenAttacks: 1
   attackRadius: 7
-  projectile: {fileID: 5844516349274330829, guid: 07b34ce0e8c61b4469c075be4a800017, type: 3}
+  projectile: {fileID: 4661030731578753000, guid: 07b34ce0e8c61b4469c075be4a800017, type: 3}
 --- !u!1 &3880233374939079349
 GameObject:
   m_ObjectHideFlags: 0
