@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingPanel: {fileID: 842192365}
-  quitGameConfirmPanel: {fileID: 0}
+  quitGameConfirmPanel: {fileID: 1877540339}
   musicSlider: {fileID: 1918144834}
   sfxSlider: {fileID: 1861404412}
 --- !u!114 &49491472
