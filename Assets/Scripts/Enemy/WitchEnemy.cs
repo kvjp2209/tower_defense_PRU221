@@ -9,6 +9,7 @@ public class WitchEnemy : Enemy
     {
         setUp();
         getNormalPath();
+        description = "The witch will move slowly, healing enemies within range every second.";
     }
 
     // Update is called once per frame

@@ -9,8 +9,8 @@ public class BoarEnemy : Enemy
     {
         setUp();
         getNormalPath();
+        description = "Aggressive Boar possess high running speed.";
     }
-
 
     // Update is called once per frame
     void Update()

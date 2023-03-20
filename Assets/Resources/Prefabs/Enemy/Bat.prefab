@@ -496,5 +496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+  description: Bats fly directly into the main Tower without following the path on
+    the map.
   MaxHealth: 100
   healthBarBehaviour: {fileID: 1898825536}

@@ -419,7 +419,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b180be3225c93847af1077dcdf6214c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 3
+  description: Aggressive Boar possess high running speed.
   MaxHealth: 100
   healthBarBehaviour: {fileID: 5465823523883536002}
 --- !u!1 &6863953874522145365

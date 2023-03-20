@@ -8,6 +8,8 @@ public abstract class Enemy : MonoBehaviour
     public WayPoints WayPoints { get; set; }
     public float currentHealth { get; set; }
 
+    public string description;
+
     [SerializeField]
     public float MaxHealth;
 
@@ -19,7 +21,6 @@ public abstract class Enemy : MonoBehaviour
     {
         currentHealth = MaxHealth;
         healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
-       
     }
     public void getNormalPath()
     {
@@ -32,7 +33,6 @@ public abstract class Enemy : MonoBehaviour
             {
                 WayPoints = GameObject.FindGameObjectWithTag("WaypointNomal2").GetComponent<WayPoints>();
             }
-        
     }
     public void getDirectPath()
     {
