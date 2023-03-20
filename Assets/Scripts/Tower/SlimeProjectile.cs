@@ -1,26 +1,37 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using Unity.VisualScripting;
+using UnityEditor.Tilemaps;
+using UnityEngine;
 
 
 public class SlimeProjectile : Projectile
     {
+    private Timer timer;
+    public float sec = 3;
     void Start()
     {
-
+        
     }
-
-    // Update is called once per frame
     void Update()
     {
-
+        Destroy(gameObject,3);
     }
-    void OnTriggerEnter2D(Collider2D collider2D)
+
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        Enemy newP = collider2D.gameObject.GetComponent<Enemy>();
-        if (collider2D.tag == "Enemy")
+        if (collision.gameObject.CompareTag("Enemy"))
         {
+            Enemy newP = collision.gameObject.GetComponent<Enemy>();
             newP.speed = 0.5f;
             newP.takeDamage(attackDamage);
+            Destroy(gameObject);
         }
+    }
+
+    IEnumerator LateCall()
+    {
+        yield return new WaitForSeconds(sec);
+        gameObject.SetActive(false);
     }
 }
 

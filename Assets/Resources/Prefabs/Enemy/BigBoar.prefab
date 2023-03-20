@@ -423,6 +423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   description: Aggressive Boar possess high running speed.
+  currentHealth: 0
   MaxHealth: 100
   healthBarBehaviour: {fileID: 5465823523883536002}
 --- !u!61 &385231887404430936
@@ -435,7 +436,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.027979046, y: 0}

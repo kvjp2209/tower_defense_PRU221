@@ -2,12 +2,25 @@
 
 public class FireProjectile : Projectile 
     {
-    void OnTriggerEnter2D(Collider2D collider2D)
+    private Timer timer;
+    void Start()
     {
-        Enemy newP = collider2D.gameObject.GetComponent<Enemy>();
-        if (collider2D.tag == "Enemy")
+        timer = gameObject.AddComponent<Timer>();
+        timer.Duration = 0;
+        timer.Run();
+    }
+    void Update()
+    {
+        Destroy(gameObject, 3);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
         {
+            Enemy newP = collision.gameObject.GetComponent<Enemy>();
             newP.takeDamage(attackDamage);
+            Destroy(gameObject);
         }
     }
 }
