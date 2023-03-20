@@ -14,6 +14,7 @@ TagManager:
   - WaypointNormal2
   - WaypointNormal1
   - WaypointBat3
+  - TowerSelectPanel
   layers:
   - Default
   - TransparentFX
@@ -54,14 +55,11 @@ TagManager:
   - name: Map
     uniqueID: 2544364531
     locked: 0
-  - name: Base
-    uniqueID: 3265044153
-    locked: 0
   - name: Tower
     uniqueID: 2929096253
     locked: 0
-  - name: Panel
-    uniqueID: 3544943475
+  - name: Base
+    uniqueID: 3265044153
     locked: 0
   - name: UI
     uniqueID: 1549305665
@@ -71,4 +69,10 @@ TagManager:
     locked: 0
   - name: Minimap
     uniqueID: 851825383
+    locked: 0
+  - name: MainTower
+    uniqueID: 3829108543
+    locked: 0
+  - name: Panel
+    uniqueID: 3544943475
     locked: 0

@@ -29,7 +29,7 @@ public class CameraMove : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (Input.GetMouseButton(0))
+        if ((Input.touchCount >0 && Input.GetTouch(0).phase == TouchPhase.Moved) || Input.GetMouseButton(0))
         {
             Diference = (cam.ScreenToWorldPoint(Input.mousePosition)) - cam.transform.position;
             if (Drag == false)

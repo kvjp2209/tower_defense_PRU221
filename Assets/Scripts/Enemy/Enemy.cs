@@ -30,30 +30,38 @@ public abstract class Enemy : MonoBehaviour
     }
     public void getNormalPath()
     {
-        int monsterPath = Random.Range(0, 2);
+        int monsterPath = Random.Range(0, 3);
             if (monsterPath == 0)
             {
                 WayPoints = GameObject.FindGameObjectWithTag("WaypointNormal1").GetComponent<WayPoints>();
             }
-            else
+            else if (monsterPath ==1)
             {
                 WayPoints = GameObject.FindGameObjectWithTag("WaypointNormal2").GetComponent<WayPoints>();
             }
+             else
+        {
+            WayPoints = GameObject.FindGameObjectWithTag("WaypointNormal3").GetComponent<WayPoints>();
+        }
     }
     public void getDirectPath()
     {
-        int monsterPath = Random.Range(0, 2);
+        int monsterPath = Random.Range(0, 3);
             if (monsterPath == 0)
             {
                 WayPoints = GameObject.FindGameObjectWithTag("WaypointBat1").GetComponent<WayPoints>();
             }
-            else
+            else if(monsterPath ==1)
             {
                 WayPoints = GameObject.FindGameObjectWithTag("WaypointBat2").GetComponent<WayPoints>();
-            }
+            } else
+        {
+            WayPoints = GameObject.FindGameObjectWithTag("WaypointBat3").GetComponent<WayPoints>();
+        }
     }
     public void Move(WayPoints waypoints)
     {
+        
         transform.position = Vector2.MoveTowards(transform.position, waypoints.wayPoints[waypointIndex].position, speed * Time.deltaTime);
         if (Vector2.Distance(transform.position, waypoints.wayPoints[waypointIndex].position) < 0.1f)
         {

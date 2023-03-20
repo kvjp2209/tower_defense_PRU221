@@ -11,6 +11,7 @@ public class NormalEnemy : Enemy
        setUp();
        getNormalPath();
        description = "Spiders will move at a slow speed with base health.";
+        gameObject.transform.position = WayPoints.wayPoints[0].position;
     }
 
     // Update is called once per frame

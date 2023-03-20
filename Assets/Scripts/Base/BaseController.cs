@@ -12,8 +12,8 @@ public class BaseController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Button yourButton = btnBase.GetComponent<Button>();
-        yourButton.onClick.AddListener(ShowPanelClick);
+     //   Button yourButton = btnBase.GetComponent<Button>();
+     //   yourButton.onClick.AddListener(ShowPanelClick);
     }
 
     
@@ -22,12 +22,12 @@ public class BaseController : MonoBehaviour
     {
         
     }
-    private void ShowPanelClick()
+    public void ShowPanelClick()
     {
-      //  AudioManager.AudioInstance.PlaySFX("ButtonClick");
+        //  AudioManager.AudioInstance.PlaySFX("ButtonClick");
         panelObject = PanelObjectPool.shareInstance.GetPooledObject();
-        panelObject.SetActive(true);
-       // Destroy(gameObject);
+        Debug.Log("Click base");
+       panelObject.SetActive(true);
         panelObject.GetComponent<PanelController>().Base = this.gameObject;
     }
 }

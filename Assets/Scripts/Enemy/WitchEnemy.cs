@@ -19,6 +19,7 @@ public class WitchEnemy : Enemy
         setUp();
         getNormalPath();
         description = "The witch will move slowly, healing enemies within range every second.";
+        gameObject.transform.position = WayPoints.wayPoints[0].position;
         damage = damageSpec;
         curhealth = currentHealth;
     }

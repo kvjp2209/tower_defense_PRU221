@@ -10,6 +10,7 @@ public class GoblinEnemy : Enemy
         setUp();
         getNormalPath();
         description = "Goblins possessing high health and speed are also greater than normal monsters.";
+        gameObject.transform.position = WayPoints.wayPoints[0].position;
     }
 
     // Update is called once per frame
