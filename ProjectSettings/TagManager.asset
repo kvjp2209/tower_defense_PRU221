@@ -67,3 +67,6 @@ TagManager:
   - name: Enemy
     uniqueID: 398787365
     locked: 0
+  - name: Minimap
+    uniqueID: 851825383
+    locked: 0
