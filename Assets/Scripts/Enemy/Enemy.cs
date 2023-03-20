@@ -9,6 +9,9 @@ public abstract class Enemy : MonoBehaviour
     Vector3 SpawnPoint = new Vector3(-17, -3, 0);
     public float speed;
     public WayPoints WayPoints { get; set; }
+
+    public string description;
+
     public float currentHealth;
     public int damage { get; set; }
     [SerializeField]

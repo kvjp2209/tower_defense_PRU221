@@ -101,8 +101,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  currentHealth: 0
-  MaxHealth: 10
+  description: The witch will move slowly, healing enemies within range every second.
+  MaxHealth: 100
   healthBarBehaviour: {fileID: 7147931199482379999}
   attackCooldown: 4
   range: 3

@@ -9,8 +9,8 @@ public class GoblinEnemy : Enemy
     {
         setUp();
         getNormalPath();
+        description = "Goblins possessing high health and speed are also greater than normal monsters.";
     }
-
 
     // Update is called once per frame
     void Update()

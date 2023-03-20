@@ -9,6 +9,7 @@ public class BatEnemy : Enemy
     {
         setUp();
         getDirectPath();
+        description = "Bats fly directly into the main Tower without following the path on the map.";
     }
 
     // Update is called once per frame

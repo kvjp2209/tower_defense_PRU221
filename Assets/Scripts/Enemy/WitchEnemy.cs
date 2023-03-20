@@ -18,6 +18,7 @@ public class WitchEnemy : Enemy
     {
         setUp();
         getNormalPath();
+        description = "The witch will move slowly, healing enemies within range every second.";
         damage = damageSpec;
         curhealth = currentHealth;
     }

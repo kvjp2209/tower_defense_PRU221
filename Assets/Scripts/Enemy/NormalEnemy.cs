@@ -10,6 +10,7 @@ public class NormalEnemy : Enemy
     {
        setUp();
        getNormalPath();
+       description = "Spiders will move at a slow speed with base health.";
     }
 
     // Update is called once per frame

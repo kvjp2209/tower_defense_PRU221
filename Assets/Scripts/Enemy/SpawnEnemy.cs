@@ -66,7 +66,6 @@ public class SpawnEnemy : MonoBehaviour
         {
             numberOfTypeEnemy = Wave;
         }
-        
         for (int i = 0; i < numberOfTypeEnemy; i++)
         {
             listEnemySpawn[i] = listTypeEnemy[i];

@@ -191,8 +191,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  currentHealth: 0
-  MaxHealth: 10
+  description: Goblins possessing high health and speed are also greater than normal
+    monsters.
+  MaxHealth: 150
   healthBarBehaviour: {fileID: 4052929003041407480}
 --- !u!61 &7656456333534294537
 BoxCollider2D:
