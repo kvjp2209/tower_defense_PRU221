@@ -26,11 +26,11 @@ public abstract class Enemy : MonoBehaviour
         int monsterPath = Random.Range(0, 2);
             if (monsterPath == 0)
             {
-                WayPoints = GameObject.FindGameObjectWithTag("WaypointNomal1").GetComponent<WayPoints>();
+                WayPoints = GameObject.FindGameObjectWithTag("WaypointNormal1").GetComponent<WayPoints>();
             }
             else
             {
-                WayPoints = GameObject.FindGameObjectWithTag("WaypointNomal2").GetComponent<WayPoints>();
+                WayPoints = GameObject.FindGameObjectWithTag("WaypointNormal2").GetComponent<WayPoints>();
             }
         
     }

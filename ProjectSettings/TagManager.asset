@@ -7,11 +7,13 @@ TagManager:
   - Map
   - WaypointBat1
   - WaypointBat2
-  - WaypointNomal1
-  - WaypointNomal2
   - Enemy
   - Projectile
   - SlimeProjectile
+  - WaypointNormal3
+  - WaypointNormal2
+  - WaypointNormal1
+  - WaypointBat3
   layers:
   - Default
   - TransparentFX
