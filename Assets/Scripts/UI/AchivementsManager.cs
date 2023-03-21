@@ -27,11 +27,14 @@ public class AchivementsManager : MonoBehaviour
         Debug.Log(trophies.Length);
         foreach(var t in trophies)
         {
-            if(t.achivementTypes== achivementTypes)
+            if(t.achivementTypes == achivementTypes)
             {
-                t.UnlockThisAchivement();
-                achivementNotificationController.gameObject.SetActive(true);
-                achivementNotificationController.SetTextAchivevement(t.trophyName);
+                if (!t.isUnlocked)
+                {
+                    t.UnlockThisAchivement();
+                    achivementNotificationController.gameObject.SetActive(true);
+                    achivementNotificationController.SetTextAchivevement(t.trophyName);
+                }
             }
         }
        //// Achivement achivementToUnlock = trophies.SingleOrDefault(t => t.achivementTypes == achivementTypes);

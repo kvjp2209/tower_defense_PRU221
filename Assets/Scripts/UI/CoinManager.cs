@@ -50,7 +50,7 @@ public class CoinManager : MonoBehaviour
         {
             AchivementsManager.instance.UnlockAchivement(Achivement.AchivementTypes.Earn1000coins);
         }
-        if (currentCoins >= 1500)
+        if (currentCoins >= 150)
         {
             AchivementsManager.instance.UnlockAchivement(Achivement.AchivementTypes.Earn1500coins);
         }

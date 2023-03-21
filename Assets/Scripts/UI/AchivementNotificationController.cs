@@ -39,5 +39,7 @@ public class AchivementNotificationController : MonoBehaviour
     {
         achivevementText.text = text;
         AudioManager.AudioInstance.PlaySFX("Achivevement");
+        timer.Duration = 3;
+        timer.Run();
     }
 }
