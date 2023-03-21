@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -26,11 +27,10 @@ public class WitchEnemy : Enemy
         gameObject.transform.position = WayPoints.wayPoints[0].position;
         damage = damageSpec;
         curhealth = currentHealth;
-        healthZone.rectTransform.sizeDelta  = new Vector2(healthZone.rectTransform.sizeDelta.x * range,
-           healthZone.rectTransform.sizeDelta.y * range);
-        witchEffect = WitchEffectObjectPool.shareInstance.GetPooledObject();
-        witchEffect.SetActive(true);
-        witchEffect.transform.position = gameObject.transform.position;
+        /*healthZone.rectTransform.sizeDelta  = new Vector2(healthZone.rectTransform.sizeDelta.x * range,
+           healthZone.rectTransform.sizeDelta.y * range);*/
+        witchEffect.transform.localScale = new Vector2(range * 1.6f, 1.6f * range);
+        //witchEffect.transform.position = gameObject.transform.position;
     }
 
     // Update is called once per frame
@@ -54,16 +54,15 @@ public class WitchEnemy : Enemy
             cooldownTimer = 0;
             Healing();
         }
-        if (cooldownTimer <= 1)
+        if (cooldownTimer > attackCooldown/2)
         {
             witchEffect.SetActive(true);
-            witchEffect.transform.position = gameObject.transform.position;
-        } else
+        }
+        else if (cooldownTimer < attackCooldown/2)
         {
             witchEffect.SetActive(false);
-            witchEffect.transform.position = gameObject.transform.position;
         }
-        
+
 
         Move(WayPoints);
         curhealth = currentHealth;
@@ -95,12 +94,4 @@ public class WitchEnemy : Enemy
         Gizmos.DrawWireSphere(transform.position, range);
     }
 
-    /*private void DamagePlayer()
-    {
-        //if player still in range damage
-        if (PlayerInSight())
-        {
-            playerHealth.TakeDamage(damage);
-        }
-    }*/
 }

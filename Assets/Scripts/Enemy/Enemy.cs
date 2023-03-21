@@ -81,7 +81,6 @@ public abstract class Enemy : MonoBehaviour
             {
                 HealthBarManager.instance.TakeDamage(MaxHealth);
                 waypointIndex = 0;
-                witchEffect.SetActive(false);
                 gameObject.transform.position = waypoints.wayPoints[0].position;
                 currentHealth = MaxHealth;
                 this.gameObject.SetActive(false);
@@ -98,7 +97,6 @@ public abstract class Enemy : MonoBehaviour
             waypointIndex = 0;
             gameObject.transform.position = WayPoints.wayPoints[0].position;
             currentHealth = MaxHealth;
-            witchEffect.SetActive(false);
             this.gameObject.SetActive(false);
             CoinManager.instance.AddCoins((int)MaxHealth);
         }
