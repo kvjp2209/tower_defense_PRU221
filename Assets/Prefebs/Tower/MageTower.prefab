@@ -144,6 +144,7 @@ GameObject:
   - component: {fileID: 6637538401908160846}
   - component: {fileID: 7587704710314406334}
   - component: {fileID: 470082232694233976}
+  - component: {fileID: -6823188366648579217}
   m_Layer: 0
   m_Name: MageTower
   m_TagString: Untagged
@@ -232,6 +233,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btnBase: {fileID: 6725796269639599081}
+  canvas: {fileID: 0}
+--- !u!114 &-6823188366648579217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3354938469936611947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ff26a7333cca734f8f2bb6769ea05d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeBetweenAttacks: 0
+  attackRadius: 0
+  projectile: {fileID: 0}
+  targetEnemy: {fileID: 0}
+  attackCounter: 0
+  isAttacking: 0
 --- !u!1 &4965745975280194689
 GameObject:
   m_ObjectHideFlags: 0
