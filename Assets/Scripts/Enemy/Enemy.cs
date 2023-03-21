@@ -91,17 +91,15 @@ public abstract class Enemy : MonoBehaviour
         this.currentHealth = Mathf.Clamp(currentHealth + _value, 0, MaxHealth);
         healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
     }
-
-    public void checkCurrentHealh( WayPoints waypoints)
+    public void checkHealth(WayPoints wayPoints)
     {
         if (this.currentHealth <= 0)
         {
             waypointIndex = 0;
-            gameObject.transform.position = waypoints.wayPoints[0].position;
             currentHealth = MaxHealth;
             this.gameObject.SetActive(false);
+            gameObject.transform.position = wayPoints.wayPoints[0].position;
             CoinManager.instance.AddCoins((int)MaxHealth);
         }
     }
-
 }

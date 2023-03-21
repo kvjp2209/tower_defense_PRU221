@@ -17,7 +17,7 @@ public class GoblinEnemy : Enemy
     void Update()
     {
         Move(WayPoints);
-        checkCurrentHealh(WayPoints);
+        checkHealth(WayPoints);
         if (Input.GetKeyDown(KeyCode.W))
         {
             healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
