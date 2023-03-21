@@ -5,13 +5,13 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ItemInfoGridController : MonoBehaviour
+public class ItemEnemyInfoGridController : MonoBehaviour
 {
     public GameObject backBtn;
     public GameObject allScrollPage;
     public GameObject panelDescription;
     public List<Enemy> enemies;
-    private List<GameObject> list;
+    public List<GameObject> list;
     // Start is called before the first frame update
     void Start()
     {

@@ -7,7 +7,9 @@ using UnityEngine.UI;
 public class MainMenuController : MonoBehaviour
 {
     public GameObject menuOptions;
+    public GameObject achivement;
     public GameObject infoEnemyPage;
+    public GameObject infoTowerPage;
     public GameObject settingPanel;
     public GameObject buttons;
     public GameObject mainGameLogo;
@@ -17,8 +19,19 @@ public class MainMenuController : MonoBehaviour
         musicSlider.value = AudioManager.AudioInstance.musicSource.volume;
         sfxSlider.value = AudioManager.AudioInstance.sfxSource.volume;
         AudioManager.AudioInstance.PlayMusic("MainMenuTheme");
+        achivement.SetActive(true);
+        achivement.SetActive(false);
     }
-
+    public void OpenAchivementButton()
+    {
+        AudioManager.AudioInstance.PlaySFX("ButtonClick");
+        achivement.SetActive(true);
+    }
+    public void CloseAchivementButton()
+    {
+        AudioManager.AudioInstance.PlaySFX("ButtonClick");
+        achivement.SetActive(false);
+    }
     public void StartGameButton()
     {
         AudioManager.AudioInstance.PlaySFX("ButtonClick");
@@ -38,12 +51,21 @@ public class MainMenuController : MonoBehaviour
         AudioManager.AudioInstance.PlaySFX("ButtonClick");
         infoEnemyPage.SetActive(true);
     }
-    public void CloseInfoMenu()
+    public void CloseEnemyInfoMenu()
     {
         AudioManager.AudioInstance.PlaySFX("ButtonClick");
         infoEnemyPage.SetActive(false);
     }
-
+    public void TowerInfoMenu()
+    {
+        AudioManager.AudioInstance.PlaySFX("ButtonClick");
+        infoTowerPage.SetActive(true);
+    }
+    public void CloseTowerInfoMenu()
+    {
+        AudioManager.AudioInstance.PlaySFX("ButtonClick");
+        infoTowerPage.SetActive(false);
+    }
     public void StartNewGame()
     {
         AudioManager.AudioInstance.PlaySFX("ButtonClick");

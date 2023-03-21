@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btnBase: {fileID: 3041920328536993264}
+  panelObject: {fileID: 0}
 --- !u!1 &8704279166641370335
 GameObject:
   m_ObjectHideFlags: 0
