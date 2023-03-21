@@ -1,6 +1,7 @@
 using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 using static UnityEngine.GraphicsBuffer;
@@ -9,6 +10,8 @@ public abstract class Enemy : MonoBehaviour
 {
     Vector3 SpawnPoint = new Vector3(-17, -3, 0);
     public float speed;
+    
+    private float firstSpeed { get; set; }
     public WayPoints WayPoints { get; set; }
 
     public string description;
@@ -29,6 +32,7 @@ public abstract class Enemy : MonoBehaviour
     {
         currentHealth = MaxHealth;
         healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
+        firstSpeed = speed;
     }
     public void getNormalPath()
     {
@@ -82,6 +86,8 @@ public abstract class Enemy : MonoBehaviour
                 HealthBarManager.instance.TakeDamage(MaxHealth);
                 waypointIndex = 0;
                 gameObject.transform.position = waypoints.wayPoints[0].position;
+                healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
+                this.speed = firstSpeed;
                 currentHealth = MaxHealth;
                 this.gameObject.SetActive(false);
             }
@@ -97,6 +103,8 @@ public abstract class Enemy : MonoBehaviour
             waypointIndex = 0;
             gameObject.transform.position = WayPoints.wayPoints[0].position;
             currentHealth = MaxHealth;
+            healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
+            this.speed = firstSpeed;
             this.gameObject.SetActive(false);
             CoinManager.instance.AddCoins((int)MaxHealth);
         }

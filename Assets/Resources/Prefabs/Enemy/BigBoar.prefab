@@ -322,7 +322,7 @@ SpriteRenderer:
   m_SortingLayerID: -105774645
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 5a439cd914d4ad24e9027d24584a22da, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e957bd854b9ea364bb1fd36123ae70a5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -348,8 +348,9 @@ MonoBehaviour:
   speed: 3
   description: Aggressive Boar possess high running speed.
   currentHealth: 0
-  MaxHealth: 100
+  MaxHealth: 30
   healthBarBehaviour: {fileID: 4612436394436043019}
+  witchEffect: {fileID: 0}
 --- !u!61 &385231887404430936
 BoxCollider2D:
   m_ObjectHideFlags: 0
