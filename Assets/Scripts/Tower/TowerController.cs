@@ -12,6 +12,7 @@ public abstract class Tower : MonoBehaviour
     public bool isAttacking = false;
     public int upgradeCost;
     public int currentCoin;
+    public int towerCost;
 
 
     // Start is called before the first frame update

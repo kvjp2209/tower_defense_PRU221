@@ -234,6 +234,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ff26a7333cca734f8f2bb6769ea05d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeBetweenAttacks: 3
+  attackRadius: 10
+  projectile: {fileID: 0}
+  targetEnemy: {fileID: 0}
+  attackCounter: 0
+  isAttacking: 0
+  upgradeCost: 0
+  currentCoin: 0
+  towerCost: 15
   range: 5
   fireRate: 1
   bulletPrefab: {fileID: 2464478299558298700, guid: 72ddbe2da1a1b464a8b86dd29a82108d, type: 3}

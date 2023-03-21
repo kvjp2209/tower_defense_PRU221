@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: -105774645
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: b32da84cb94c44444b5311c0f43abc38, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 93805a96357b5a0429da8553b08b7c0e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,12 +100,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf47fc3c7133cd6498774af4675492ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 4
   description: Goblins possessing high health and speed are also greater than normal
     monsters.
   currentHealth: 0
-  MaxHealth: 10
+  MaxHealth: 15
   healthBarBehaviour: {fileID: 4726926741029389528}
+  witchEffect: {fileID: 0}
 --- !u!61 &7656456333534294537
 BoxCollider2D:
   m_ObjectHideFlags: 0
