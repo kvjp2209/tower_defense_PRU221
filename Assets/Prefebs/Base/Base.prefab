@@ -200,7 +200,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btnBase: {fileID: 3041920328536993264}
-  panelObject: {fileID: 0}
+  canvas: {fileID: 948796937043361209}
+  panelObject: {fileID: 7591022425517685425, guid: 1739864668172e349832d99ea0d1dacd, type: 3}
 --- !u!1 &8704279166641370335
 GameObject:
   m_ObjectHideFlags: 0

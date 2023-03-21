@@ -1,6 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class Tower : MonoBehaviour
 {
@@ -11,19 +12,24 @@ public abstract class Tower : MonoBehaviour
     public float attackCounter;
     public bool isAttacking = false;
     public int upgradeCost;
-    public int currentCoin;
+    public int towerCost;
 
+    public Button buttonUpgrade;
+    public TextMeshProUGUI textLever;
+    public TextMeshProUGUI textUpgradeCost;
+    private int currentLever = 1;
+    //private int currentCoins;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        textUpgradeCost.text = upgradeCost.ToString();
     }
-    
+
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     public void Attack()
@@ -88,12 +94,16 @@ public abstract class Tower : MonoBehaviour
     }
     public void UpgradeTower()
     {
-        currentCoin = CoinManager.instance.GetCurrentCoins();
+        Debug.Log("Upgrade clicked");
         if (CoinManager.instance.GetCurrentCoins() >= upgradeCost)
         {
-            currentCoin -= upgradeCost;
+            Debug.Log("is upgrading with coin = " + CoinManager.instance.GetCurrentCoins() + " and cost " + upgradeCost);
+            CoinManager.instance.SubtractCoins(upgradeCost);
+            currentLever++;
+            textLever.text = "Lever " + currentLever;
             attackRadius *= 1.2f; // Increase the tower's range by 50%
             upgradeCost *= 2; // Double the cost of the tower's next upgrade
+            textUpgradeCost.text = upgradeCost.ToString();
         }
     }
 }

@@ -1261,7 +1261,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 124fb07793660e34dae09bf8259917c3, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.508
+  m_Volume: 0.12
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3086,9 +3086,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 442282407}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1048008861}
@@ -4265,9 +4265,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 626031263}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1048008861}
@@ -4670,8 +4670,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691134083}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -265.917, y: 118.779, z: -3698.9998}
-  m_LocalScale: {x: 89.02671, y: 88.39377, z: 41.1}
+  m_LocalPosition: {x: -652.66, y: 335.17, z: -3698.9998}
+  m_LocalScale: {x: 230, y: 230, z: 40}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1599525357}
@@ -5190,8 +5190,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 813069457}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -297.15298, y: -105.85305, z: -3698.9998}
-  m_LocalScale: {x: 64.83524, y: 55.58095, z: 41.1}
+  m_LocalPosition: {x: -665.56, y: -264.31, z: -3698.9998}
+  m_LocalScale: {x: 168.96439, y: 142.84305, z: 41.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1599525357}
@@ -6323,9 +6323,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 938924550}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1048008861}
@@ -7736,9 +7736,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1115762400}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1048008861}
@@ -7762,8 +7762,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   achivementTypes: 2
-  trophyName: Earn 2000 coins
-  trophyDescription: Player save up 2000 coins
+  trophyName: Earn 350 coins
+  trophyDescription: Player save up 350 coins
   trophyNameText: {fileID: 546296569}
   trophyDescriptionText: {fileID: 1257709845}
 --- !u!114 &1115762403
@@ -7989,8 +7989,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   achivementTypes: 1
-  trophyName: Earn 1500 coins
-  trophyDescription: Player save up 1500 coins
+  trophyName: Earn 250 coins
+  trophyDescription: Player save up 250 coins
   trophyNameText: {fileID: 546296569}
   trophyDescriptionText: {fileID: 1257709845}
 --- !u!114 &1135016543
@@ -8880,8 +8880,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1274807174}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 317.703, y: -116.312996, z: -3698.9998}
-  m_LocalScale: {x: 58.037308, y: 53.327248, z: 41.1}
+  m_LocalPosition: {x: 701.27, y: -282.22, z: -3698.9998}
+  m_LocalScale: {x: 182.23715, y: 153.58247, z: 41.1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1599525357}
@@ -9181,8 +9181,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1323604947}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 269.205, y: 124.121994, z: -3698.9998}
-  m_LocalScale: {x: -89.02671, y: 88.39377, z: 41.1}
+  m_LocalPosition: {x: 655.81, y: 330.37, z: -3698.9998}
+  m_LocalScale: {x: -230, y: 230, z: 40}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1599525357}
@@ -9267,9 +9267,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1330952410}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1048008861}
@@ -9293,8 +9293,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   achivementTypes: 0
-  trophyName: Earn 1000 coins
-  trophyDescription: Player save up 1000 coins
+  trophyName: Earn 200 coins
+  trophyDescription: Player save up 200 coins
   trophyNameText: {fileID: 546296569}
   trophyDescriptionText: {fileID: 1257709845}
 --- !u!114 &1330952413
@@ -10073,9 +10073,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1471119120}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1048008861}
@@ -10469,7 +10469,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6e68d49cfb40858488e971d445148762, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.492
+  m_Volume: 0.111
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -12084,9 +12084,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1861917648}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1048008861}
@@ -12110,8 +12110,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   achivementTypes: 3
-  trophyName: Earn 2500 coins
-  trophyDescription: Player save up 2500 coins
+  trophyName: Earn 500 coins
+  trophyDescription: Player save up 500 coins
   trophyNameText: {fileID: 546296569}
   trophyDescriptionText: {fileID: 1257709845}
 --- !u!114 &1861917651
@@ -13532,10 +13532,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3

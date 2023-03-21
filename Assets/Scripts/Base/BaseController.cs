@@ -8,21 +8,13 @@ public class BaseController : MonoBehaviour
 {
     [SerializeField]
     Button btnBase;
-    [SerializeField]
-    Canvas canvas;
-    Camera cam;
     GameObject panelObject;
     // Start is called before the first frame update
     void Start()
     {
-      cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>() as Camera;
-      canvas.GetComponent<Canvas>().worldCamera = cam;
         Button yourButton = btnBase.GetComponent<Button>();
         yourButton.onClick.AddListener(ShowPanelClick);
-
-    }
-
-    
+    }    
     // Update is called once per frame
     void Update()
     {
@@ -33,7 +25,7 @@ public class BaseController : MonoBehaviour
         //  AudioManager.AudioInstance.PlaySFX("ButtonClick");
         panelObject = PanelObjectPool.shareInstance.GetPooledObject();
         Debug.Log("Click base");
-       panelObject.SetActive(true);
+        panelObject.SetActive(true);
         panelObject.GetComponent<PanelController>().Base = this.gameObject;
     }
 }

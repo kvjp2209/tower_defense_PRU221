@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 public class BombTower : Tower
-    {
+{
     void Start()
     {
         

@@ -5,7 +5,7 @@ using UnityEngine.SocialPlatforms.Impl;
 public class CoinManager : MonoBehaviour
 {
     public static CoinManager instance;
-    private int currentCoins = 100;
+    private int currentCoins = 150;
     [SerializeField] 
     private TextMeshProUGUI coinText;
 
@@ -27,17 +27,12 @@ public class CoinManager : MonoBehaviour
         return currentCoins;
     }
 
-    public bool SubtractCoins(int amount)
+    public void SubtractCoins(int amount)
     {
         if (currentCoins >= amount)
         {
             currentCoins -= amount;
             coinText.text = ": " + currentCoins.ToString();
-            return true;
-        }
-        else
-        {
-            return false;
         }
     }
 
@@ -46,21 +41,21 @@ public class CoinManager : MonoBehaviour
         currentCoins += amount;
         coinText.text = ": " + currentCoins.ToString();
 
-        if (currentCoins >= 101)
+        if (currentCoins >= 200)
         {
-            AchivementsManager.instance.UnlockAchivement(Achivement.AchivementTypes.Earn1000coins);
+            AchivementsManager.instance.UnlockAchivement(Achivement.AchivementTypes.Earn200coins);
         }
-        if (currentCoins >= 150)
+        if (currentCoins >= 250)
         {
-            AchivementsManager.instance.UnlockAchivement(Achivement.AchivementTypes.Earn1500coins);
+            AchivementsManager.instance.UnlockAchivement(Achivement.AchivementTypes.Earn250coins);
         }
-        if (currentCoins >= 2000)
+        if (currentCoins >= 350)
         {
-            AchivementsManager.instance.UnlockAchivement(Achivement.AchivementTypes.Earn2000coins);
+            AchivementsManager.instance.UnlockAchivement(Achivement.AchivementTypes.Earn350coins);
         }
-        if (currentCoins >= 2500)
+        if (currentCoins >= 500)
         {
-            AchivementsManager.instance.UnlockAchivement(Achivement.AchivementTypes.Earn2500coins);
+            AchivementsManager.instance.UnlockAchivement(Achivement.AchivementTypes.Earn500coins);
         }
     }
 

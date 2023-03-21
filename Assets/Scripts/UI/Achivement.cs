@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class Achivement : MonoBehaviour
 {
     private Image img;
-    public enum AchivementTypes { Earn1000coins, Earn1500coins, Earn2000coins, Earn2500coins, Suvive5waves, Suvive10waves, Suvive12waves, Suvive15waves }
+    public enum AchivementTypes { Earn200coins, Earn250coins, Earn350coins, Earn500coins, Suvive5waves, Suvive10waves, Suvive12waves, Suvive15waves }
     [SerializeField]
     public AchivementTypes achivementTypes;
 

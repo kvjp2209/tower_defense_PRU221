@@ -20,12 +20,29 @@ public class WaveController : MonoBehaviour
         wave_timer = gameObject.AddComponent<Timer>();
         wave_timer.Duration = intervalWave;
         wave_timer.Run();
-        waveText.text = "Wave: "+ wave;
+        waveText.text = "Wave: " + wave;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (wave == 5)
+        {
+            AchivementsManager.instance.UnlockAchivement(Achivement.AchivementTypes.Suvive5waves);
+        }
+        if (wave == 10)
+        {
+            AchivementsManager.instance.UnlockAchivement(Achivement.AchivementTypes.Suvive10waves);
+        }
+        if (wave == 12)
+        {
+            AchivementsManager.instance.UnlockAchivement(Achivement.AchivementTypes.Suvive12waves);
+        }
+        if (wave == 15)
+        {
+            AchivementsManager.instance.UnlockAchivement(Achivement.AchivementTypes.Suvive15waves);
+        }
+
         if (wave_timer.Finished)
         {
             //wave=0, first 5 seconds for players to buy towers
