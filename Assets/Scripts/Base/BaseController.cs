@@ -8,12 +8,18 @@ public class BaseController : MonoBehaviour
 {
     [SerializeField]
     Button btnBase;
+    [SerializeField]
+    Canvas canvas;
+    Camera cam;
     GameObject panelObject;
     // Start is called before the first frame update
     void Start()
     {
-     //   Button yourButton = btnBase.GetComponent<Button>();
-     //   yourButton.onClick.AddListener(ShowPanelClick);
+      cam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>() as Camera;
+      canvas.GetComponent<Canvas>().worldCamera = cam;
+        Button yourButton = btnBase.GetComponent<Button>();
+        yourButton.onClick.AddListener(ShowPanelClick);
+
     }
 
     

@@ -29,6 +29,19 @@ public class CameraMove : MonoBehaviour
 
     private void LateUpdate()
     {
+        if (Applications.platform == RuntimePlatform.Android)
+        {
+            if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Moved)
+            {
+                Touch touch = Input.GetTouch(0);
+                Diference = (cam.ScreenToWorldPoint(touch.position)) - cam.transform.position;
+                if (Drag == false)
+                {
+                    Drag = true;
+                    Origin = cam.ScreenToWorldPoint(touch.position);
+                }
+            }
+        }
         if ((Input.touchCount >0 && Input.GetTouch(0).phase == TouchPhase.Moved) || Input.GetMouseButton(0))
         {
             Diference = (cam.ScreenToWorldPoint(Input.mousePosition)) - cam.transform.position;
@@ -45,7 +58,7 @@ public class CameraMove : MonoBehaviour
 
         if (Drag)
         {
-           // Camera.main.transform.position = Origin - Diference;
+           
             cam.transform.position = ClampCamera(Origin - Diference);
         }
     }
