@@ -407,7 +407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74fd3408c4fe644459d81ad1aa3ce61c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 2
   description: Spiders will move at a slow speed with base health.
   currentHealth: 15
   MaxHealth: 15

@@ -446,7 +446,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btnBase: {fileID: 6725796269639599081}
-  canvas: {fileID: 0}
 --- !u!114 &1181500284627649062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -459,14 +458,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef957854dca2de94688b90eabc43e897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 2
-  attackRadius: 10
+  timeBetweenAttacks: 1
+  attackRadius: 7
   projectile: {fileID: 4661030731578753000, guid: 07b34ce0e8c61b4469c075be4a800017, type: 3}
   targetEnemy: {fileID: 0}
   attackCounter: 0
   isAttacking: 0
   upgradeCost: 10
-  towerCost: 50
+  towerCost: 30
   buttonUpgrade: {fileID: 5402910660436859434}
   textLever: {fileID: 8950243490483880103}
   textUpgradeCost: {fileID: 795467608734704659}

@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf47fc3c7133cd6498774af4675492ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 3
   description: Goblins possessing high health and speed are also greater than normal
     monsters.
   currentHealth: 0
