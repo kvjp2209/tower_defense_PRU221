@@ -18,9 +18,9 @@ public class NormalEnemy : Enemy
     void Update()
     {
         Move(WayPoints);
-        checkHealth(WayPoints);
         if (Input.GetKeyDown(KeyCode.W))
         {
+            takeDamage(2);
             healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
         }
     }

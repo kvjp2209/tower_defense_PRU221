@@ -35,7 +35,7 @@ public class SpawnEnemy : MonoBehaviour
         spawnEnemy_timer.Run();
 
         //get list type of all enemies
-        listTypeEnemy = new string[5] {"normal", "goblin", "witch", "bat","boar" };
+        listTypeEnemy = new string[5] {"witch", "goblin", "normal", "bat","boar" };
         listEnemySpawn = new string[5];
 
         enemyFactory = gameObject.AddComponent<EnemyFactory>();

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class WitchEnemy : Enemy
 {
@@ -9,8 +11,11 @@ public class WitchEnemy : Enemy
     [SerializeField] private BoxCollider2D boxCollider;
     [SerializeField] private LayerMask enemyLayer;
     [SerializeField] private int damageSpec;
+    [SerializeField] private Image healthZone;
     private float cooldownTimer = Mathf.Infinity;
     public float curhealth;
+    private Vector2 WitchEffectRange;
+    
 
 
     // Start is called before the first frame update
@@ -22,14 +27,18 @@ public class WitchEnemy : Enemy
         gameObject.transform.position = WayPoints.wayPoints[0].position;
         damage = damageSpec;
         curhealth = currentHealth;
+        /*healthZone.rectTransform.sizeDelta  = new Vector2(healthZone.rectTransform.sizeDelta.x * range,
+           healthZone.rectTransform.sizeDelta.y * range);*/
+        witchEffect.transform.localScale = new Vector2(range * 1.6f, 1.6f * range);
+        //witchEffect.transform.position = gameObject.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        checkCurrentHealh(WayPoints);
         if (Input.GetKeyDown(KeyCode.W))
         {
+            takeDamage(2);
             healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
         }
 
@@ -45,6 +54,15 @@ public class WitchEnemy : Enemy
             cooldownTimer = 0;
             Healing();
         }
+        if (cooldownTimer > attackCooldown/2)
+        {
+            witchEffect.SetActive(true);
+        }
+        else if (cooldownTimer < attackCooldown/2)
+        {
+            witchEffect.SetActive(false);
+        }
+
 
         Move(WayPoints);
         checkHealth(WayPoints);
@@ -55,7 +73,6 @@ public class WitchEnemy : Enemy
     {
         // Detect ememies in range of attack
         Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(transform.position, range, enemyLayer);
-
         // Healing them
         foreach (Collider2D enemy in hitEnemies)
         {
@@ -75,15 +92,7 @@ public class WitchEnemy : Enemy
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(boxCollider.bounds.center, range);
+        Gizmos.DrawWireSphere(transform.position, range);
     }
 
-    /*private void DamagePlayer()
-    {
-        //if player still in range damage
-        if (PlayerInSight())
-        {
-            playerHealth.TakeDamage(damage);
-        }
-    }*/
 }

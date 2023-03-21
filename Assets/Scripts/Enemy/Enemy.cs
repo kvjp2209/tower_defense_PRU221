@@ -2,6 +2,7 @@ using Newtonsoft.Json.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 using static UnityEngine.GraphicsBuffer;
 
 public abstract class Enemy : MonoBehaviour
@@ -21,10 +22,11 @@ public abstract class Enemy : MonoBehaviour
 
     private int waypointIndex;
 
+    public GameObject witchEffect;
+
 
     public void setUp()
     {
-        
         currentHealth = MaxHealth;
         healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
     }
@@ -40,9 +42,9 @@ public abstract class Enemy : MonoBehaviour
                 WayPoints = GameObject.FindGameObjectWithTag("WaypointNormal2").GetComponent<WayPoints>();
             }
              else
-        {
+            {
             WayPoints = GameObject.FindGameObjectWithTag("WaypointNormal3").GetComponent<WayPoints>();
-        }
+            }
     }
     public void getDirectPath()
     {
@@ -61,7 +63,13 @@ public abstract class Enemy : MonoBehaviour
     }
     public void Move(WayPoints waypoints)
     {
-        
+        if (transform.position.x > waypoints.wayPoints[waypointIndex].position.x)
+        {
+            gameObject.transform.localScale = new Vector3(-1, 1, 0);
+        } else
+        {
+            gameObject.transform.localScale = new Vector3(1, 1, 0);
+        }
         transform.position = Vector2.MoveTowards(transform.position, waypoints.wayPoints[waypointIndex].position, speed * Time.deltaTime);
         if (Vector2.Distance(transform.position, waypoints.wayPoints[waypointIndex].position) < 0.1f)
         {
@@ -84,22 +92,19 @@ public abstract class Enemy : MonoBehaviour
     {
         this.currentHealth -= damege;
         healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
+        if (this.currentHealth <= 0)
+        {
+            waypointIndex = 0;
+            gameObject.transform.position = WayPoints.wayPoints[0].position;
+            currentHealth = MaxHealth;
+            this.gameObject.SetActive(false);
+            CoinManager.instance.AddCoins((int)MaxHealth);
+        }
     }
 
     public void healing(int _value)
     {
         this.currentHealth = Mathf.Clamp(currentHealth + _value, 0, MaxHealth);
         healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
-    }
-    public void checkHealth(WayPoints wayPoints)
-    {
-        if (this.currentHealth <= 0)
-        {
-            waypointIndex = 0;
-            currentHealth = MaxHealth;
-            this.gameObject.SetActive(false);
-            gameObject.transform.position = wayPoints.wayPoints[0].position;
-            CoinManager.instance.AddCoins((int)MaxHealth);
-        }
     }
 }
