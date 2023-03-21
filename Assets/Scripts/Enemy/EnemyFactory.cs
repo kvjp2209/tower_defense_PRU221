@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class EnemyFactory : MonoBehaviour
 {
-    Vector3 SpawnPoint = new Vector3(-17, -3, 0);
     public GameObject CreateEnemy(string type)
     {
         GameObject enemy;
