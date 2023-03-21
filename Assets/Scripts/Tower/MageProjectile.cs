@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MageProjectile : MonoBehaviour
+public class MageProjectile : Projectile
 {
     public float speed = 10f;
     public int damage = 2;

@@ -61,14 +61,14 @@ TagManager:
   - name: Base
     uniqueID: 3265044153
     locked: 0
-  - name: UI
-    uniqueID: 1549305665
-    locked: 0
   - name: Projectile
     uniqueID: 742205985
     locked: 0
   - name: MainTower
     uniqueID: 3829108543
+    locked: 0
+  - name: UI
+    uniqueID: 1549305665
     locked: 0
   - name: Minimap
     uniqueID: 851825383

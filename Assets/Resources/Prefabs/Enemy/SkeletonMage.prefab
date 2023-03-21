@@ -297,7 +297,7 @@ MonoBehaviour:
   healthBarBehaviour: {fileID: 9206262473997518400}
   witchEffect: {fileID: 5245989863653282717}
   attackCooldown: 4
-  range: 10
+  range: 3
   boxCollider: {fileID: 170303302}
   enemyLayer:
     serializedVersion: 2

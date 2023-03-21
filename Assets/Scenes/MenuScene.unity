@@ -13478,8 +13478,11 @@ MonoBehaviour:
   allScrollPage: {fileID: 643660459}
   panelDescription: {fileID: 563109128}
   towers:
+  - {fileID: 752780312405317456, guid: 56801798fc2a1fc46bee12e773d25ee0, type: 3}
   - {fileID: 1181500284627649062, guid: 915f603b664367647835b9f5de454bbf, type: 3}
+  - {fileID: 6187522842179580105, guid: f0ce420d59343f641b6a112abacc80d5, type: 3}
   - {fileID: 3650385317291868567, guid: e9bb99043a735d54696989725c0af78b, type: 3}
+  - {fileID: 2247053095243292745, guid: fc93102aed277044198827fbba33f214, type: 3}
   list: []
 --- !u!1 &2135798651
 GameObject:

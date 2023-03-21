@@ -65,7 +65,6 @@ public class WitchEnemy : Enemy
 
 
         Move(WayPoints);
-        checkHealth(WayPoints);
         curhealth = currentHealth;
     }
 

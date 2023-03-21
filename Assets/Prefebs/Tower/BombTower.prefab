@@ -221,6 +221,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btnBase: {fileID: 6725796269639599081}
+  canvas: {fileID: 0}
 --- !u!114 &752780312405317456
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,12 +234,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77a332c9f856c5946a0e45455dbd9704, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 1
+  timeBetweenAttacks: 3
   attackRadius: 4
   projectile: {fileID: 6079568443298299318, guid: e4aa255bf9584f24fb56778c56ed1f1b, type: 3}
   targetEnemy: {fileID: 0}
   attackCounter: 0
   isAttacking: 0
+  upgradeCost: 0
+  currentCoin: 0
 --- !u!1 &3405955209703122272
 GameObject:
   m_ObjectHideFlags: 0

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MageTower : MonoBehaviour
+public class MageTower : Tower
 {
     public float range = 5f;
     public float fireRate = 1f;
