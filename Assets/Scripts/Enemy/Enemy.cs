@@ -84,7 +84,6 @@ public abstract class Enemy : MonoBehaviour
     {
         this.currentHealth -= damege;
         healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
-      
     }
 
     public void healing(int _value)

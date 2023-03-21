@@ -1,28 +1,52 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
+public class MageProjectile : MonoBehaviour
+{
+    public float speed = 10f;
+    public int damage = 2;
 
-public class MageProjectile : Projectile
+    private Transform target;
+
+    public void Seek(Transform _target)
     {
-    private Timer timer;
-    void Start()
-    {
-        timer = gameObject.AddComponent<Timer>();
-        timer.Duration = 0;
-        timer.Run();
+        target = _target;
     }
+
     void Update()
     {
-        Destroy(gameObject, 3);
+        if (target == null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Vector2 direction = target.position - transform.position;
+        float distanceThisFrame = speed * Time.deltaTime;
+
+        if (direction.magnitude <= distanceThisFrame)
+        {
+            HitTarget();
+            return;
+        }
+
+        transform.Translate(direction.normalized * distanceThisFrame, Space.World);
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    void HitTarget()
     {
-        if (collision.gameObject.CompareTag("Enemy"))
+        Destroy(gameObject);
+        Damage(target);
+    }
+
+    void Damage(Transform enemy)
+    {
+        Enemy e = enemy.GetComponent<Enemy>();
+
+        if (e != null)
         {
-            Enemy newP = collision.gameObject.GetComponent<Enemy>();
-            newP.takeDamage(attackDamage);
-            Destroy(gameObject);
+            e.takeDamage(damage);
         }
     }
 }
-

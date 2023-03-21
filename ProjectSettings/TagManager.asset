@@ -64,15 +64,18 @@ TagManager:
   - name: UI
     uniqueID: 1549305665
     locked: 0
-  - name: MainTower
-    uniqueID: 3829108543
-    locked: 0
   - name: Projectile
     uniqueID: 742205985
+    locked: 0
+  - name: MainTower
+    uniqueID: 3829108543
     locked: 0
   - name: Minimap
     uniqueID: 851825383
     locked: 0
   - name: Panel
     uniqueID: 3544943475
+    locked: 0
+  - name: New Layer 9
+    uniqueID: 398582873
     locked: 0

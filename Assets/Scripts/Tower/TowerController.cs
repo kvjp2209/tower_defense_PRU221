@@ -10,7 +10,9 @@ public abstract class Tower : MonoBehaviour
     public GameObject targetEnemy = null;
     public float attackCounter;
     public bool isAttacking = false;
-    
+    public int upgradeCost;
+    public int currentCoin;
+
 
     // Start is called before the first frame update
     void Start()
@@ -83,5 +85,15 @@ public abstract class Tower : MonoBehaviour
             }
         }
         return closestEnemy;
+    }
+    public void UpgradeTower()
+    {
+        currentCoin = CoinManager.instance.GetCurrentCoins();
+        if (CoinManager.instance.GetCurrentCoins() >= upgradeCost)
+        {
+            currentCoin -= upgradeCost;
+            attackRadius *= 1.2f; // Increase the tower's range by 50%
+            upgradeCost *= 2; // Double the cost of the tower's next upgrade
+        }
     }
 }
