@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using TMPro;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class CoinManager : MonoBehaviour
 {
@@ -44,6 +45,23 @@ public class CoinManager : MonoBehaviour
     {
         currentCoins += amount;
         coinText.text = ": " + currentCoins.ToString();
+
+        if (currentCoins >= 101)
+        {
+            AchivementsManager.instance.UnlockAchivement(Achivement.AchivementTypes.Earn1000coins);
+        }
+        if (currentCoins >= 1500)
+        {
+            AchivementsManager.instance.UnlockAchivement(Achivement.AchivementTypes.Earn1500coins);
+        }
+        if (currentCoins >= 2000)
+        {
+            AchivementsManager.instance.UnlockAchivement(Achivement.AchivementTypes.Earn2000coins);
+        }
+        if (currentCoins >= 2500)
+        {
+            AchivementsManager.instance.UnlockAchivement(Achivement.AchivementTypes.Earn2500coins);
+        }
     }
 
     private void Start()

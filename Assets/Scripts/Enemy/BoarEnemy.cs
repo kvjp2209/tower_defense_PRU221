@@ -12,6 +12,7 @@ public class BoarEnemy : Enemy
         setUp();
         getNormalPath();
         description = "Aggressive Boar possess high running speed.";
+        gameObject.transform.position = WayPoints.wayPoints[0].position;
     }
 
     // Update is called once per frame

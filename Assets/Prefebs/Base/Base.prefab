@@ -58,7 +58,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: -1029923143
+  m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &1097603229639768861
@@ -174,7 +174,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1029923143
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7fba744e499e10a4dbc1e7016ec16442, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -199,8 +199,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8f3e14954531ea469fbb6925a150c76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panelObject: {fileID: 0}
   btnBase: {fileID: 3041920328536993264}
+  panelObject: {fileID: 0}
 --- !u!1 &8704279166641370335
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,7 +11,7 @@ public class ItemInfoGridController : MonoBehaviour
     public GameObject allScrollPage;
     public GameObject panelDescription;
     public List<Enemy> enemies;
-    public List<GameObject> list;
+    private List<GameObject> list;
     // Start is called before the first frame update
     void Start()
     {

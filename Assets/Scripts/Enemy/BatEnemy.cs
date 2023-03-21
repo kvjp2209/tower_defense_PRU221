@@ -10,6 +10,7 @@ public class BatEnemy : Enemy
         setUp();
         getDirectPath();
         description = "Bats fly directly into the main Tower without following the path on the map.";
+        gameObject.transform.position = WayPoints.wayPoints[0].position;
     }
 
     // Update is called once per frame

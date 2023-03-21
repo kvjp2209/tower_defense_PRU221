@@ -222,7 +222,7 @@ GameObject:
   - component: {fileID: 6637538401908160846}
   - component: {fileID: 7587704710314406334}
   - component: {fileID: 470082232694233976}
-  - component: {fileID: 8483706046680069915}
+  - component: {fileID: 3650385317291868567}
   m_Layer: 0
   m_Name: SlimeTower
   m_TagString: Untagged
@@ -238,8 +238,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3354938469936611947}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.86, y: 1.66, z: 773.97394}
-  m_LocalScale: {x: 2.6469247, y: 2.0848887, z: 1}
+  m_LocalPosition: {x: -3.86, y: 1.3733, z: 773.97394}
+  m_LocalScale: {x: 2.6469247, y: 2.6415539, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8029349376365273492}
@@ -285,7 +285,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1365871043
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: abc1391170941c344a721bdbbbb4952f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -310,9 +310,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8f3e14954531ea469fbb6925a150c76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 531286050804057258, guid: 63d12a4ed08c87e4ead1d08682df3731, type: 3}
   btnBase: {fileID: 6725796269639599081}
---- !u!114 &8483706046680069915
+--- !u!114 &3650385317291868567
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -321,12 +320,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 3354938469936611947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa6c72357936f6547ad682bc08465f0d, type: 3}
+  m_Script: {fileID: 11500000, guid: 2d2f5b37b7f738b4a9bcbc82c800dcea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
-  attackRadius: 7
-  projectile: {fileID: 5844516349274330829, guid: a5415e0a5b69cc14db7a8dee79f4bc4a, type: 3}
+  timeBetweenAttacks: 1
+  attackRadius: 5
+  projectile: {fileID: -3526050142781545143, guid: a5415e0a5b69cc14db7a8dee79f4bc4a, type: 3}
+  targetEnemy: {fileID: 0}
+  attackCounter: 0
+  isAttacking: 0
 --- !u!1 &3678381900440232805
 GameObject:
   m_ObjectHideFlags: 0

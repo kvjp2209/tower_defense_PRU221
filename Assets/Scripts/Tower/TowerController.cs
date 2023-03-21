@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TowerController : MonoBehaviour
+public abstract class Tower : MonoBehaviour
 {
-    [SerializeField]
-    float timeBetweenAttacks;
-    [SerializeField]
-    float attackRadius;
-    [SerializeField]
-    Projectile projectile;
-    private GameObject targetEnemy = null;
-    private float attackCounter;
-    private bool isAttacking = false;
+    public float timeBetweenAttacks;
+    public float attackRadius;
+    public Projectile projectile;
+    public GameObject targetEnemy = null;
+    public float attackCounter;
+    public bool isAttacking = false;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -23,41 +21,7 @@ public class TowerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        attackCounter -= Time.deltaTime;
-        if (targetEnemy == null)
-        {
-            GameObject nearestEnemy = GetNearestEnemy();
-            if (nearestEnemy != null && Vector2.Distance(transform.localPosition, nearestEnemy.transform.localPosition) <= attackRadius)
-            {
-                targetEnemy = nearestEnemy;
-            }
-        }
-        else
-        {
-            if (attackCounter <= 0f)
-            {
-                isAttacking = true;
-                attackCounter = timeBetweenAttacks;
-            }
-            else
-            {
-                isAttacking = false;
-            }
-            if (Vector2.Distance(transform.position, targetEnemy.transform.position) > attackRadius)
-            {
-                targetEnemy = null;
-            }
-        }
-        if (isAttacking == true) { Attack(); }
-
-
-
-    }
-
-    public void FixedUpdate()
-    {
         
-
     }
 
     public void Attack()
@@ -91,7 +55,7 @@ public class TowerController : MonoBehaviour
         }
     }
 
-    private float GetTargetDistance(GameObject thisEnemy)
+    public float GetTargetDistance(GameObject thisEnemy)
     {
         if (thisEnemy == null)
         {
@@ -104,7 +68,7 @@ public class TowerController : MonoBehaviour
         return Mathf.Abs(Vector2.Distance(transform.localPosition, thisEnemy.transform.localPosition));
     }
 
-    private GameObject GetNearestEnemy()
+    public GameObject GetNearestEnemy()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         GameObject closestEnemy = enemies[0];
@@ -117,9 +81,7 @@ public class TowerController : MonoBehaviour
                     closestEnemy = enemy;
                 }
             }
-            /*transform.LookAt(closestEnemy.transform.position);*/
         }
-        Debug.Log("Heloooooooooooooooo"+closestEnemy+"Hiiiiiiiiiiiiiiiii");
         return closestEnemy;
     }
 }
