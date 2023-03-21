@@ -208,7 +208,7 @@ GameObject:
   - component: {fileID: 6637538401908160846}
   - component: {fileID: 7587704710314406334}
   - component: {fileID: 470082232694233976}
-  - component: {fileID: 8483706046680069915}
+  - component: {fileID: 6187522842179580105}
   m_Layer: 0
   m_Name: FireTower
   m_TagString: Untagged
@@ -271,7 +271,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1365871043
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2312f44fa158172479d463812a44d469, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -296,9 +296,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8f3e14954531ea469fbb6925a150c76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 531286050804057258, guid: 63d12a4ed08c87e4ead1d08682df3731, type: 3}
   btnBase: {fileID: 6725796269639599081}
---- !u!114 &8483706046680069915
+--- !u!114 &6187522842179580105
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -307,12 +306,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 3354938469936611947}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa6c72357936f6547ad682bc08465f0d, type: 3}
+  m_Script: {fileID: 11500000, guid: f29f6f05715518646a5c372cf4a7f614, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenAttacks: 0.5
-  attackRadius: 7
-  projectile: {fileID: 5844516349274330829, guid: 2ea3ce74df9696d4ca8e683dfd9226af, type: 3}
+  timeBetweenAttacks: 1.5
+  attackRadius: 5
+  projectile: {fileID: 9043157108902402450, guid: 2ea3ce74df9696d4ca8e683dfd9226af, type: 3}
+  targetEnemy: {fileID: 0}
+  attackCounter: 0
+  isAttacking: 0
 --- !u!1 &4965745975280194689
 GameObject:
   m_ObjectHideFlags: 0
