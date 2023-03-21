@@ -27,7 +27,7 @@ public class WitchEnemy : Enemy
     // Update is called once per frame
     void Update()
     {
-        checkCurrentHealh(WayPoints);
+        checkHealth(WayPoints);
         if (Input.GetKeyDown(KeyCode.W))
         {
             healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
