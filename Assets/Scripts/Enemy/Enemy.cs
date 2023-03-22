@@ -107,6 +107,7 @@ public abstract class Enemy : MonoBehaviour
             this.speed = firstSpeed;
             this.gameObject.SetActive(false);
             CoinManager.instance.AddCoins((int)MaxHealth);
+            AudioManager.AudioInstance.PlaySFX("EnemyDeath");
         }
     }
 
