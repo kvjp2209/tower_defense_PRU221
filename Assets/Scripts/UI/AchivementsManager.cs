@@ -20,6 +20,18 @@ public class AchivementsManager : MonoBehaviour
         achivementNotificationController.gameObject.SetActive(true);
         achivementNotificationController.gameObject.SetActive(false);
         DontDestroyOnLoad(gameObject);
+        
+    }
+    public void isReachAchivement()
+    {
+        Debug.Log("This is first achivement");
+        CoinManager.instance.isReach200TargetCoin += UnlockAchivement;
+/*        Debug.Log("This is second achivement");
+        CoinManager.instance.isReach250TargetCoin += UnlockAchivement;
+        Debug.Log("This is third achivement");
+        CoinManager.instance.isReach350TargetCoin += UnlockAchivement;
+        Debug.Log("This is fourth achivement");
+        CoinManager.instance.isReach500TargetCoin += UnlockAchivement;*/
     }
     public void UnlockAchivement(Achivement.AchivementTypes achivementTypes)
     {

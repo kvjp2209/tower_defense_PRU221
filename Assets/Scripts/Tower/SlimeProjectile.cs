@@ -7,6 +7,8 @@ public class SlimeProjectile : Projectile
     {
     private Timer timer;
     public float sec = 3;
+    public delegate void isShotBySlime(Enemy enemy);
+    public event isShotBySlime isShotBySlimeBullet;
     void Start()
     {
         
@@ -21,7 +23,10 @@ public class SlimeProjectile : Projectile
         if (collision.gameObject.CompareTag("Enemy"))
         {
             Enemy newP = collision.gameObject.GetComponent<Enemy>();
-            newP.speed = 0.5f;
+            if (isShotBySlimeBullet != null)
+            {
+                isShotBySlimeBullet(newP);
+            }
             newP.takeDamage(attackDamage);
             Destroy(gameObject);
         }

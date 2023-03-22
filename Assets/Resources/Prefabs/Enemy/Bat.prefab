@@ -474,7 +474,7 @@ SpriteRenderer:
   m_SortingLayerID: -105774645
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 07ce9ac3ddda4f94b8c063ec222fec5b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ece01ee1b6767ee449eb8fb3f67e9a25, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -497,12 +497,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bab339ae41e96742bb4428610d2fa97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1
   description: Bats fly directly into the main Tower without following the path on
     the map.
   currentHealth: 0
-  MaxHealth: 100
+  MaxHealth: 15
   healthBarBehaviour: {fileID: 1898825536}
+  witchEffect: {fileID: 0}
 --- !u!61 &5800970865709378703
 BoxCollider2D:
   m_ObjectHideFlags: 0

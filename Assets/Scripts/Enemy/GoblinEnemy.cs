@@ -22,5 +22,10 @@ public class GoblinEnemy : Enemy
             takeDamage(2);
             healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
         }
+        try
+        {
+            FindObjectOfType<SlimeProjectile>().isShotBySlimeBullet += isAttackBySlime;
+        }
+        catch { }
     }
 }

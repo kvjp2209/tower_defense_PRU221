@@ -78,7 +78,9 @@ public abstract class Tower : MonoBehaviour
 
     public GameObject GetNearestEnemy()
     {
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        try { 
+        GameObject[] enemies = null;
+        enemies = GameObject.FindGameObjectsWithTag("Enemy");
         GameObject closestEnemy = enemies[0];
         if (enemies.Length > 0)
         {
@@ -90,7 +92,11 @@ public abstract class Tower : MonoBehaviour
                 }
             }
         }
-        return closestEnemy;
+            return closestEnemy;
+        }
+        catch { return null; }
+        
+     
     }
     public void UpgradeTower()
     {
