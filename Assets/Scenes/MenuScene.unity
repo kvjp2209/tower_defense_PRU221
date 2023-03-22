@@ -1261,7 +1261,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 124fb07793660e34dae09bf8259917c3, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.12
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -8547,7 +8547,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 91, y: -82.000015}
+  m_AnchoredPosition: {x: 91, y: -82}
   m_SizeDelta: {x: 122.32001, y: 125.099976}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1210517848
@@ -10100,7 +10100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   achivementTypes: 5
   trophyName: Suvive 10 waves
-  trophyDescription: Player suvive 5 waves
+  trophyDescription: Player suvive 10 waves
   trophyNameText: {fileID: 546296569}
   trophyDescriptionText: {fileID: 1257709845}
 --- !u!114 &1471119123
@@ -10469,7 +10469,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6e68d49cfb40858488e971d445148762, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.111
+  m_Volume: 0
   m_Pitch: 1
   Loop: 0
   Mute: 0
