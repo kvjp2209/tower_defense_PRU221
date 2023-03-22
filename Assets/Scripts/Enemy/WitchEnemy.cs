@@ -41,6 +41,11 @@ public class WitchEnemy : Enemy
             takeDamage(2);
             healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
         }
+        try
+        {
+            FindObjectOfType<SlimeProjectile>().isShotBySlimeBullet += isAttackBySlime;
+        }
+        catch { }
 
         cooldownTimer += Time.deltaTime;
 

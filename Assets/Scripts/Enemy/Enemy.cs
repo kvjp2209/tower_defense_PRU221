@@ -115,4 +115,8 @@ public abstract class Enemy : MonoBehaviour
         this.currentHealth = Mathf.Clamp(currentHealth + _value, 0, MaxHealth);
         healthBarBehaviour.setHealthBar(currentHealth, MaxHealth);
     }
+    public void isAttackBySlime(Enemy enemy)
+    {
+        enemy.speed = 0.5f;
+    }
 }
