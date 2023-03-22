@@ -348,7 +348,7 @@ MonoBehaviour:
   speed: 3
   description: Aggressive Boar possess high running speed.
   currentHealth: 0
-  MaxHealth: 20
+  MaxHealth: 25
   healthBarBehaviour: {fileID: 4612436394436043019}
   witchEffect: {fileID: 0}
 --- !u!61 &385231887404430936

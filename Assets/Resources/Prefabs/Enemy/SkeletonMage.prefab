@@ -293,7 +293,7 @@ MonoBehaviour:
   speed: 2
   description: The witch will move slowly, healing enemies within range every second.
   currentHealth: 0
-  MaxHealth: 15
+  MaxHealth: 20
   healthBarBehaviour: {fileID: 9206262473997518400}
   witchEffect: {fileID: 5245989863653282717}
   attackCooldown: 4

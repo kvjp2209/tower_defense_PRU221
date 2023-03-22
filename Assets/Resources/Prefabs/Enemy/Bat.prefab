@@ -501,7 +501,7 @@ MonoBehaviour:
   description: Bats fly directly into the main Tower without following the path on
     the map.
   currentHealth: 0
-  MaxHealth: 15
+  MaxHealth: 20
   healthBarBehaviour: {fileID: 1898825536}
   witchEffect: {fileID: 0}
 --- !u!61 &5800970865709378703

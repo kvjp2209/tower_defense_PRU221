@@ -104,7 +104,7 @@ MonoBehaviour:
   description: Goblins possessing high health and speed are also greater than normal
     monsters.
   currentHealth: 0
-  MaxHealth: 15
+  MaxHealth: 20
   healthBarBehaviour: {fileID: 4726926741029389528}
   witchEffect: {fileID: 0}
 --- !u!61 &7656456333534294537

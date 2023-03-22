@@ -409,8 +409,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   description: Spiders will move at a slow speed with base health.
-  currentHealth: 15
-  MaxHealth: 15
+  currentHealth: 20
+  MaxHealth: 20
   healthBarBehaviour: {fileID: 8309433517742436158}
   witchEffect: {fileID: 0}
 --- !u!61 &338212933

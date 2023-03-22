@@ -29,7 +29,7 @@ public abstract class Tower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        textUpgradeCost.text = upgradeCost.ToString();
     }
 
     public void Attack()
@@ -101,6 +101,7 @@ public abstract class Tower : MonoBehaviour
     public void UpgradeTower()
     {
         Debug.Log("Upgrade clicked");
+        textUpgradeCost.text = upgradeCost.ToString();
         if (CoinManager.instance.GetCurrentCoins() >= upgradeCost)
         {
             Debug.Log("is upgrading with coin = " + CoinManager.instance.GetCurrentCoins() + " and cost " + upgradeCost);
